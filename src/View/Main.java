@@ -90,6 +90,7 @@ public class Main {
             controller.addProgram(programState);
             controller.allStepsExecution();
             System.out.println(controller.getAllSteps());
+            System.out.println(programList.get(choice).toString());
         }
         catch (Exception e){
             System.out.println(e.getMessage());
