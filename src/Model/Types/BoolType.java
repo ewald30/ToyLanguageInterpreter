@@ -19,7 +19,7 @@ public class BoolType implements TypeInterface{
 
     @Override
     public ValueInterface defaultValue() {
-        /*  Returns a defaul value
+        /*  Returns a default value
                 Throws: None
                 Return: False (default value for bool type)
         */
