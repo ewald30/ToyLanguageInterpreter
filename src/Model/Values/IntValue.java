@@ -18,6 +18,14 @@ public class IntValue implements ValueInterface{
     }
 
     @Override
+    public boolean equals(Object element){
+        //  Checks if an element is of type IntValue
+        if (element instanceof IntValue)
+            return true;
+        return false;
+    }
+
+    @Override
     public TypeInterface getType() {
         //  Returns the type of the object
         return new IntType();

@@ -18,6 +18,14 @@ public class BoolValue implements ValueInterface{
     }
 
     @Override
+    public boolean equals(Object element){
+        //  Checks if an object is of type BoolValue
+        if (element instanceof BoolValue)
+            return true;
+        return false;
+    }
+
+    @Override
     public TypeInterface getType() {
         /*  Returns a new booltype instance
                 Throws: None

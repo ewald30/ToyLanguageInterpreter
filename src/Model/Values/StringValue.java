@@ -15,6 +15,13 @@ public class StringValue implements ValueInterface{
         //  Getter for the value
         return this.value;
     }
+    @Override
+    public boolean equals(Object element){
+        //  Checks if an element is a string value
+        if (element instanceof StringValue)
+            return true;
+        return false;
+    }
 
     @Override
     public ValueInterface deepCopy() {
