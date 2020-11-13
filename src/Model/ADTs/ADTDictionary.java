@@ -18,13 +18,25 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     @Override
     public void add(TKey key, TValue value) throws DictionaryException {
         /*  Adds a (key, value) pair to dictionary
-                Throws: DictionaryException if the pair is already stored in dicionary
+                Throws: DictionaryException if the pair is already stored in dictionary
                 Return: None
         */
         if(this.dictionary.containsKey(key))
             throw new DictionaryException("Key already stored!");
 
         this.dictionary.put(key, value);
+    }
+
+    @Override
+    public void remove(TKey tKey) throws DictionaryException {
+        /*  Removes a <key, value> pair from dictionary
+                Throws: DictionaryException if the pair is not stored in dictionary
+                Return: None
+        */
+        if (!this.dictionary.containsKey(tKey))
+            throw new DictionaryException("Key does not exist in dictionary!");
+
+        dictionary.remove(tKey);
     }
 
     @Override
@@ -70,7 +82,7 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     }
 
     @Override
-    public boolean isDefined(String key){
+    public boolean isDefined(TKey key){
         /*  Checks if a pair with a given key is defined dictionary
                 Throws: None
                 Return: - True  - if the pair is found

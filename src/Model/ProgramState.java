@@ -1,16 +1,21 @@
 package Model;
 
 import Model.ADTs.ADTDicionaryInterface;
+import Model.ADTs.ADTDictionary;
 import Model.ADTs.ADTListInterface;
 import Model.ADTs.ADTStackInterface;
 import Model.Statements.StatementInterface;
+import Model.Values.StringValue;
 import Model.Values.ValueInterface;
+
+import java.io.BufferedReader;
 
 public class ProgramState {
     ADTStackInterface <StatementInterface> executionStack;
     ADTDicionaryInterface <String, ValueInterface> symbolTable;
     StatementInterface originalProgram;
     ADTListInterface <ValueInterface> output;
+    ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack, ADTDicionaryInterface<String, ValueInterface> symbolTable, StatementInterface originalProgram, ADTListInterface<ValueInterface> output) {
         //  Constructor for the program state
@@ -18,7 +23,9 @@ public class ProgramState {
         this.symbolTable = symbolTable;
         this.originalProgram = originalProgram;
         this.output = output;
-    }
+        //  Change this part later
+        this.fileTable = new ADTDictionary<>();
+        }
 
     public String toString(){
         //  Returns a string representation of the the program state
@@ -68,6 +75,15 @@ public class ProgramState {
         return originalProgram;
     }
 
+    public ADTDicionaryInterface<StringValue, BufferedReader> getFileTable() {
+        //  Getter for the filetable
+        return fileTable;
+    }
+
+    public void setFileTable(ADTDicionaryInterface<StringValue, BufferedReader> fileTable) {
+        //  Setter for the filetable
+        this.fileTable = fileTable;
+    }
 
 
 }

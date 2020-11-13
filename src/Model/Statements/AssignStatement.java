@@ -42,8 +42,8 @@ public class AssignStatement implements StatementInterface {
 
     @Override
     public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
-        /*  Execute and assignment statement
-                Steps: -   Get the current execution Stack
+        /*  Executes an assignment statement
+                Steps:  -   Get the current execution Stack
                         -   Get the current symboltable
                         -   check if the variable is defined
                         -   check if the type of the expression matches the type of the argument

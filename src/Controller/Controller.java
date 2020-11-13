@@ -67,10 +67,12 @@ public class Controller {
                 Return: None
         */
         ProgramState programState = this.repository.getCurrentProgramState();
+        repository.logProgramState();
 
         while(!programState.getExecutionStack().isEmpty()){
             ProgramState newState = this.singleStepExecution(programState);
-            this.addStepToOutput(newState);
+            //this.addStepToOutput(newState);
+            repository.logProgramState();
         }
     }
 }
