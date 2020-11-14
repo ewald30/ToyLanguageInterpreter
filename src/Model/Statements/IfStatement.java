@@ -3,6 +3,7 @@ package Model.Statements;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
 import Model.Exceptions.StatementException;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
@@ -76,7 +77,7 @@ public class IfStatement implements StatementInterface {
                 executionStack.push(this.elseStatement);
         }
         else
-            throw new StatementException("Conditional expression should be boolean!");
+            throw new InvalidTypeException("Conditional expression should be boolean!");
 
         return state;
     }

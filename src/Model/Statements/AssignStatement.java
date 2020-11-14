@@ -4,6 +4,7 @@ import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
 import Model.Exceptions.StatementException;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
@@ -63,7 +64,7 @@ public class AssignStatement implements StatementInterface {
 
             if(value.getType().equals(typeId))
                 symbolTable.update(this.Id, value);
-            else throw new StatementException("Type of assigned operation does not match type of " + this.Id + "\n");
+            else throw new InvalidTypeException("Type of assigned operation does not match type of " + this.Id + "\n");
         }
         else throw new StatementException("Variable " + this.Id + " was not yet delcared\n");
         return state;

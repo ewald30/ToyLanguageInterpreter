@@ -2,10 +2,7 @@ package Model.Statements;
 
 import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
-import Model.Exceptions.DictionaryException;
-import Model.Exceptions.EvaluationException;
-import Model.Exceptions.FileException;
-import Model.Exceptions.StatementException;
+import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.StringType;
@@ -50,7 +47,7 @@ public class OpenRFileStatement implements StatementInterface {
         ADTDicionaryInterface<StringValue, BufferedReader> fileTable = state.getFileTable();
 
         if (! fileName.getType().equals(new StringType())){
-            throw new StatementException("Invalid type in OpenRFIleStatement! Expected: String, got: "+fileName.getType());
+            throw new InvalidTypeException("Invalid type of file name! Expected: String, got: "+fileName.getType());
         }
 
         StringValue fileNameString = (StringValue) fileName;
