@@ -12,8 +12,6 @@ public class Controller {
     RepositoryInterface repository;
     StringBuilder allSteptsStringRepresentation;
 
-
-
     public Controller(RepositoryInterface repository) {
         //  Constructor of the controller
         this.repository = repository;
@@ -68,6 +66,9 @@ public class Controller {
         */
         ProgramState programState = this.repository.getCurrentProgramState();
         repository.logProgramState();
+
+        //  Maybe delete this
+        programState.getExecutionStack().push(programState.getOriginalProgram());
 
         while(!programState.getExecutionStack().isEmpty()){
             ProgramState newState = this.singleStepExecution(programState);

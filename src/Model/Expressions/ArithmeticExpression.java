@@ -98,7 +98,7 @@ public class ArithmeticExpression implements ExpressionInterface{
             }
             else throw new EvaluationException("Second operand should be integer!");
         }
-        else throw new EvaluationException("First operand should be Interger!");
+        else throw new EvaluationException("First operand should be Integer!");
 
     }
 

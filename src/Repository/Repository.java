@@ -13,7 +13,12 @@ import java.io.PrintWriter;
 
 public class Repository implements RepositoryInterface {
     ADTListInterface<ProgramState> programStates;
-    String logFilePath = "logFile.txt";
+    String logFilePath;
+
+    public Repository(String logFilePath){
+        this.logFilePath = logFilePath;
+        this.programStates = new ADTList<ProgramState>();
+    }
 
     public String getLogFilePath() {
         //  Getter for log file path

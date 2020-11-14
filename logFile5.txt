@@ -1,0 +1,312 @@
+   --------------------------------------
+        Execution Stack: 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = testEmpty.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = testEmpty.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: string varf, varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> ; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = testEmpty.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = testEmpty.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: string varf, varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> ; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+

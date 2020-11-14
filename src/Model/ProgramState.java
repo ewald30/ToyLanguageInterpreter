@@ -17,14 +17,14 @@ public class ProgramState {
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
 
-    public ProgramState(ADTStackInterface<StatementInterface> executionStack, ADTDicionaryInterface<String, ValueInterface> symbolTable, StatementInterface originalProgram, ADTListInterface<ValueInterface> output) {
+    public ProgramState(ADTStackInterface<StatementInterface> executionStack, ADTDicionaryInterface<String, ValueInterface> symbolTable, StatementInterface originalProgram, ADTListInterface<ValueInterface> output, ADTDicionaryInterface <StringValue, BufferedReader> fileTable) {
         //  Constructor for the program state
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.originalProgram = originalProgram;
         this.output = output;
         //  Change this part later
-        this.fileTable = new ADTDictionary<>();
+        this.fileTable = fileTable;
         }
 
     public String toString(){
