@@ -67,7 +67,7 @@ public class Controller {
         ProgramState programState = this.repository.getCurrentProgramState();
         repository.logProgramState();
 
-        //  Maybe delete this
+        
         programState.getExecutionStack().push(programState.getOriginalProgram());
 
         while(!programState.getExecutionStack().isEmpty()){
