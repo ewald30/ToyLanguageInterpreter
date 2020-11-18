@@ -1,6 +1,6 @@
 package Model.Exceptions;
 
-public class DictionaryException extends java.lang.Exception {
+public class DictionaryException extends ADTException {
     public DictionaryException(String message){
         super(message);
     }

@@ -1,5 +1,6 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
@@ -63,7 +64,8 @@ public class IfStatement implements StatementInterface {
                         -   StatementException if the expression is not boolean
                 Return: The state of the program after the execution of the if statement
         */
-        ValueInterface valueExpr = this.expression.evaluate(state.getSymbolTable());
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
+        ValueInterface valueExpr = this.expression.evaluate(state.getSymbolTable(), heap);
         TypeInterface type = valueExpr.getType();
 
         if(type.equals(new BoolType())){

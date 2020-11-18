@@ -53,9 +53,9 @@ public class RelationalExpression implements ExpressionInterface{
 
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable) throws EvaluationException, DictionaryException {
-        var valueExpression1 = this.expression1.evaluate(symbolTable);
-        var valueExpression2 = this.expression2.evaluate(symbolTable);
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
+        var valueExpression1 = this.expression1.evaluate(symbolTable, heap);
+        var valueExpression2 = this.expression2.evaluate(symbolTable, heap);
 
         if (!valueExpression1.getType().equals(new IntType()))
             throw new EvaluationException("Invalid type for expression1. Expected: Int got: " + valueExpression1.getType().toString());

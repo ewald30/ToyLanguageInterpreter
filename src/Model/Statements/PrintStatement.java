@@ -1,5 +1,6 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTListInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
@@ -22,8 +23,9 @@ public class PrintStatement implements StatementInterface {
                 Throws: None
                 Return: state of the program after output has been updated
         */
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
         ADTListInterface <ValueInterface> output = state.getOutput();
-        ValueInterface valueExpr = this.expression.evaluate(state.getSymbolTable());
+        ValueInterface valueExpr = this.expression.evaluate(state.getSymbolTable(), heap);
         output.add(valueExpr);
 
         return state;

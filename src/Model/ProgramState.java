@@ -1,9 +1,6 @@
 package Model;
 
-import Model.ADTs.ADTDicionaryInterface;
-import Model.ADTs.ADTDictionary;
-import Model.ADTs.ADTListInterface;
-import Model.ADTs.ADTStackInterface;
+import Model.ADTs.*;
 import Model.Statements.StatementInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
@@ -16,22 +13,29 @@ public class ProgramState {
     StatementInterface originalProgram;
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
+    ADTHeapInterface<Integer, ValueInterface> heap;
 
-    public ProgramState(ADTStackInterface<StatementInterface> executionStack, ADTDicionaryInterface<String, ValueInterface> symbolTable, StatementInterface originalProgram, ADTListInterface<ValueInterface> output, ADTDicionaryInterface <StringValue, BufferedReader> fileTable) {
+    public ProgramState(ADTStackInterface<StatementInterface> executionStack,
+                        ADTDicionaryInterface<String, ValueInterface> symbolTable,
+                        StatementInterface originalProgram, ADTListInterface<ValueInterface> output,
+                        ADTDicionaryInterface <StringValue, BufferedReader> fileTable,
+                        ADTHeapInterface<Integer, ValueInterface> heap) {
         //  Constructor for the program state
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.originalProgram = originalProgram;
         this.output = output;
-        //  Change this part later
         this.fileTable = fileTable;
+        this.heap = heap;
         }
 
     public String toString(){
         //  Returns a string representation of the the program state
         String result = "   --------------------------------------\n        Execution Stack: " + this.executionStack.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        Symbol Table: " + this.symbolTable.toString() + "\n    -------------------------------------\n\n";
-        result = result + "    -------------------------------------\n        Output: " + this.output.toString() + "\n    -------------------------------------\n\n";
+        result = result + "    -------------------------------------\n        File Table: " + this.fileTable.toString() + "\n    -------------------------------------\n\n";
+        result = result + "    -------------------------------------\n        Heap: " + this.heap.toString() + "\n    -------------------------------------\n\n";
+        result = result + "    -------------------------------------\n        Output: " + this.output.toString() + "\n    -------------------------------------\n\n\n\n";
         return result;
     }
 
@@ -76,14 +80,17 @@ public class ProgramState {
     }
 
     public ADTDicionaryInterface<StringValue, BufferedReader> getFileTable() {
-        //  Getter for the filetable
+        //  Getter for the file table
         return fileTable;
     }
 
     public void setFileTable(ADTDicionaryInterface<StringValue, BufferedReader> fileTable) {
-        //  Setter for the filetable
+        //  Setter for the file table
         this.fileTable = fileTable;
     }
 
-
+    public ADTHeapInterface<Integer, ValueInterface> getHeap() {
+        //  Returns the heap
+        return heap;
+    }
 }

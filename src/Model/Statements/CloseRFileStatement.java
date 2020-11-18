@@ -31,7 +31,8 @@ public class CloseRFileStatement implements StatementInterface{
                 Return: The state of the program after closing the file
         */
 
-        ValueInterface fileName = this.expression.evaluate(state.getSymbolTable());
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
+        ValueInterface fileName = this.expression.evaluate(state.getSymbolTable(), heap);
         ADTDicionaryInterface<StringValue, BufferedReader> fileTable = state.getFileTable();
 
         if (!fileName.getType().equals(new StringType()))

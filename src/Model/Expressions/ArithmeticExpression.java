@@ -54,7 +54,7 @@ public class ArithmeticExpression implements ExpressionInterface{
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
         /*  Evaluates an arithmetic expression
                 Steps:  -   Get the type of the operands from the SymbolTable
                         -   Check if both of them are integers
@@ -69,10 +69,10 @@ public class ArithmeticExpression implements ExpressionInterface{
                                                         -   the division of the 2
         */
         ValueInterface valueInterface1, valueInterface2;
-        valueInterface1 = this.expression1.evaluate(symbolTable);
+        valueInterface1 = this.expression1.evaluate(symbolTable, heap);
 
         if (valueInterface1.getType().equals(new IntType())){
-            valueInterface2 = this.expression2.evaluate(symbolTable);
+            valueInterface2 = this.expression2.evaluate(symbolTable, heap);
 
             if (valueInterface2.getType().equals(new IntType())) {
                 IntValue intValue1 = (IntValue) valueInterface1;

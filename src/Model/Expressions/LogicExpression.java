@@ -54,7 +54,7 @@ public class LogicExpression implements ExpressionInterface {
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
         /*  Evaluates a logic expression
                 Steps:  -   Get the type of the operands from the SymbolTable
                         -   Check if both of them are boolean
@@ -68,10 +68,10 @@ public class LogicExpression implements ExpressionInterface {
 
         */
         ValueInterface valueInterface1, valueInterface2;
-        valueInterface1 = this.expression1.evaluate(symbolTable);
+        valueInterface1 = this.expression1.evaluate(symbolTable, heap);
 
         if (valueInterface1.getType().equals(new BoolType())){
-            valueInterface2 = this.expression2.evaluate(symbolTable);
+            valueInterface2 = this.expression2.evaluate(symbolTable, heap);
 
             if(valueInterface2.getType().equals(new BoolType())){
                 BoolValue boolValue1 = (BoolValue) valueInterface1;

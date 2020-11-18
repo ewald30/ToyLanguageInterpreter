@@ -23,7 +23,7 @@ public class ValueExpression implements ExpressionInterface{
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable) throws EvaluationException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException {
         //  Returns the value of the expression
         return this.value;
     }

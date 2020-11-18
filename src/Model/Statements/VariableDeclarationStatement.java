@@ -39,7 +39,7 @@ public class VariableDeclarationStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws StatementException, DictionaryException {
         /*  Declares a variable in the symbol table and assigns it the default value
                 Throws: StatementException - if the variable is already delcared
                 Return: State of the program after the execution of variable declaration statement
@@ -56,7 +56,7 @@ public class VariableDeclarationStatement implements StatementInterface {
 
     @Override
     public StatementInterface deepCopy() {
-        //  Returns a deepcopy of the variable declaration statement
+        //  Returns a deep copy of the variable declaration statement
         return new VariableDeclarationStatement(this.Id, this.type.deepCopy());
     }
 

@@ -1,5 +1,6 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.Expressions.ValueExpression;
@@ -8,6 +9,7 @@ import Model.Types.IntType;
 import Model.Types.StringType;
 import Model.Values.IntValue;
 import Model.Values.StringValue;
+import Model.Values.ValueInterface;
 
 import java.io.IOException;
 
@@ -32,8 +34,9 @@ public class ReadFileStatement implements StatementInterface{
                         -   FileException if we reached the EOF or the file is not in the correct format
                 Return: The state of the program after executing this statement
         */
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
         var symbolTable = state.getSymbolTable();
-        var fileNameInfo = expression.evaluate(symbolTable);
+        var fileNameInfo = expression.evaluate(symbolTable, heap);
         var fileNameString = (StringValue) fileNameInfo;
         var fileTable = state.getFileTable();
 

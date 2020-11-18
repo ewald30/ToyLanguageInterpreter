@@ -57,9 +57,10 @@ public class AssignStatement implements StatementInterface {
         */
         ADTStackInterface <StatementInterface> exeStack = state.getExecutionStack();
         ADTDicionaryInterface<String, ValueInterface> symbolTable = state.getSymbolTable();
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
 
         if(symbolTable.isDefined(this.Id)){
-            ValueInterface value = this.expression.evaluate(symbolTable);
+            ValueInterface value = this.expression.evaluate(symbolTable, heap);
             TypeInterface typeId = (TypeInterface) (symbolTable.lookup(this.Id)).getType();
 
             if(value.getType().equals(typeId))

@@ -43,7 +43,8 @@ public class OpenRFileStatement implements StatementInterface {
                         -   StatementException if the filename is not a string
                 Return: The program state after the execution of the Open File Statement
         */
-        ValueInterface fileName = expression.evaluate(state.getSymbolTable());
+        ADTDicionaryInterface<Integer, ValueInterface> heap = state.getHeap();
+        ValueInterface fileName = expression.evaluate(state.getSymbolTable(), heap);
         ADTDicionaryInterface<StringValue, BufferedReader> fileTable = state.getFileTable();
 
         if (! fileName.getType().equals(new StringType())){

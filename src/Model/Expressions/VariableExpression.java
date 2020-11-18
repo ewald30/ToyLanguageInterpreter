@@ -14,10 +14,10 @@ public class VariableExpression implements ExpressionInterface {
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable) throws  DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws  DictionaryException {
         /*
             Returns the result given by the symbol table
-                Throws: DicitionaryExpcetion if something is wrong in lookup method of SymbolTable
+                Throws: Dictionary exception if something is wrong in lookup method of SymbolTable
                 Return: Result given by SymbolTable
         */
         return symbolTable.lookup(id);
