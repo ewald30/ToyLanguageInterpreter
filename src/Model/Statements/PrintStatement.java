@@ -28,7 +28,7 @@ public class PrintStatement implements StatementInterface {
         ValueInterface valueExpr = this.expression.evaluate(state.getSymbolTable(), heap);
         output.add(valueExpr);
 
-        return state;
+        return null;
     }
 
     @Override

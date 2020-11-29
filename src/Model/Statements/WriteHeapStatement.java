@@ -52,7 +52,7 @@ public class WriteHeapStatement implements StatementInterface{
             throw new InvalidTypeException("The type of expression and referenced type do not match");
 
         heap.update(valueReference.getAddress(), expressionEvaluated);
-        return state;
+        return null;
     }
 
     @Override

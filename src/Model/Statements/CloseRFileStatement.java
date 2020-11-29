@@ -52,7 +52,7 @@ public class CloseRFileStatement implements StatementInterface{
         }
 
         fileTable.remove(fileNameString);
-        return state;
+        return null;
     }
 
     @Override

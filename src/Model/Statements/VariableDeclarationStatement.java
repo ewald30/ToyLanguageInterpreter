@@ -51,7 +51,7 @@ public class VariableDeclarationStatement implements StatementInterface {
         else
             symbolTable.add(this.Id, type.defaultValue());
 
-        return state;
+        return null;
     }
 
     @Override

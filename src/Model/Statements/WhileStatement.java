@@ -44,7 +44,7 @@ public class WhileStatement implements StatementInterface{
             executionStack.push(this);
             executionStack.push(statement);
         }
-        return state;
+        return null;
     }
 
     public ExpressionInterface getExpression() {

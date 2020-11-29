@@ -46,7 +46,7 @@ public class CompoundStatement implements StatementInterface{
         exeStack.push(this.statement2);
         exeStack.push(this.statement1);
 
-        return state;
+        return null;
     }
 
     @Override

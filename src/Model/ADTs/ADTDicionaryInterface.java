@@ -13,6 +13,7 @@ public interface ADTDicionaryInterface<TKey, TValue> {
     String toString();
     boolean isDefined(TKey key);
     Map<TKey, TValue> getContent();
+    Map<TKey, TValue> deepCopy();
     void setContent(Map<TKey, TValue> content);
 
 

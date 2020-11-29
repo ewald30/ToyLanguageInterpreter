@@ -75,7 +75,7 @@ public class ReadFileStatement implements StatementInterface{
 
         //  Add the new int value to the symbol table
         symbolTable.update(variableName, new IntValue(number));
-        return state;
+        return null;
     }
 
     @Override

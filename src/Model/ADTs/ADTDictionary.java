@@ -101,4 +101,10 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     public void setContent(Map<TKey, TValue> content) {
         dictionary = content;
     }
+
+    @Override
+    public Map<TKey, TValue> deepCopy(){
+        Map<TKey, TValue> map = new HashMap<>(dictionary);
+        return map;
+    }
 }

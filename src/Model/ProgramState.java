@@ -1,6 +1,10 @@
 package Model;
 
 import Model.ADTs.*;
+import Model.Exceptions.DictionaryException;
+import Model.Exceptions.EvaluationException;
+import Model.Exceptions.StackException;
+import Model.Exceptions.StatementException;
 import Model.Statements.StatementInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
@@ -14,6 +18,7 @@ public class ProgramState {
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
     ADTHeapInterface<Integer, ValueInterface> heap;
+    static int ID;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack,
                         ADTDicionaryInterface<String, ValueInterface> symbolTable,
@@ -31,12 +36,23 @@ public class ProgramState {
 
     public String toString(){
         //  Returns a string representation of the the program state
-        String result = "   --------------------------------------\n        Execution Stack: " + this.executionStack.toString() + "\n    -------------------------------------\n\n";
+        String result = "   --------------------------------------\n        ID: " + this.ID + "\n    -------------------------------------\n\n";
+        result = result + "   --------------------------------------\n        Execution Stack: " + this.executionStack.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        Symbol Table: " + this.symbolTable.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        File Table: " + this.fileTable.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        Heap: " + this.heap.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        Output: " + this.output.toString() + "\n    -------------------------------------\n\n\n\n";
         return result;
+    }
+
+    synchronized public static int getId() {
+        //  Returns the id of the program state
+        return ID;
+    }
+
+    synchronized public static void setId(int id) {
+        //  Returns the di of the program state
+        ID = id;
     }
 
     public void setExecutionStack(ADTStackInterface<StatementInterface> executionStack) {
@@ -92,5 +108,20 @@ public class ProgramState {
     public ADTHeapInterface<Integer, ValueInterface> getHeap() {
         //  Returns the heap
         return heap;
+    }
+
+    public ProgramState oneStep() throws StackException, StatementException, DictionaryException, EvaluationException {
+        if (executionStack.isEmpty())
+            throw new StackException("Execution stack is empty");
+
+        StatementInterface currentStatement = executionStack.pop();
+        return currentStatement.execute(this);
+    }
+
+    public boolean isNotCompleted(){
+        //  Checks if the program state is completed (if execution stack is empty or not)
+        if (executionStack.isEmpty())
+            return false;
+        return true;
     }
 }

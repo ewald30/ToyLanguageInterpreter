@@ -48,7 +48,7 @@ public class NewStatement implements StatementInterface{
         var address = heap.getNewAddress();
         heap.add(address, expressionInfo);
         symbolTable.update(variableName, new ReferenceValue(address, variableValue.getLocationType()));
-        return state;
+        return null;
 
     }
 

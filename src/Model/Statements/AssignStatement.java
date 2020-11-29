@@ -68,7 +68,7 @@ public class AssignStatement implements StatementInterface {
             else throw new InvalidTypeException("Type of assigned operation does not match type of " + this.Id + "\n");
         }
         else throw new StatementException("Variable " + this.Id + " was not yet delcared\n");
-        return state;
+        return null;
     }
 
     @Override

@@ -4,7 +4,7 @@ import Model.Exceptions.StackException;
 import java.util.Stack;
 
 public class ADTStack<TValue> implements ADTStackInterface<TValue> {
-    private final Stack<TValue> ADTStack;
+    private Stack<TValue> ADTStack;
 
     public ADTStack(){
         /*  Creates a new stack
@@ -61,4 +61,20 @@ public class ADTStack<TValue> implements ADTStackInterface<TValue> {
         return result.toString();
     }
 
+    @Override
+    public Stack<TValue> getContent() {
+        //  Returns the content of the stack
+        return ADTStack;
+    }
+
+    @Override
+    public void setContent(Stack<TValue> content) {
+        //  Sets the content of the stack
+        ADTStack = content;
+    }
+
+    @Override
+    public Stack<TValue> deepCopy() {
+        return (Stack<TValue>) ADTStack.clone();
+    }
 }

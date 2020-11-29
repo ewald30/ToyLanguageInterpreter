@@ -20,8 +20,8 @@ import java.io.BufferedReader;
 import java.util.*;
 
 public class Interpreter {
-    static Repository repo = new Repository();
-    static Controller controller = new Controller(repo);
+    //static Repository repo = new Repository();
+   // static Controller controller = new Controller(repo);
 
     private static StatementInterface connectStatements(StatementInterface[] staements){
         if(staements.length == 1)
@@ -183,6 +183,7 @@ public class Interpreter {
 
         var ProgramState7 = new ProgramState(executionStack, symbolTable, example7, output, fileTable, heap);
         var repository7 = new Repository("logFile7.txt");
+        repository7.addProgramState(ProgramState7);
         var controller7 = new Controller(repository7);
         controller7.addProgram(ProgramState7);
         textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));

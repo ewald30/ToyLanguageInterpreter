@@ -11,7 +11,7 @@ public class NoOperationStatement implements StatementInterface {
 
     @Override
     public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
-        return state;
+        return null;
     }
 
     @Override

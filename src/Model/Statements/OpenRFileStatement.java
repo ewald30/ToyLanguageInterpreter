@@ -65,7 +65,7 @@ public class OpenRFileStatement implements StatementInterface {
         }
 
         fileTable.add(fileNameString, fileReader);
-        return state;
+        return null;
 
     }
 

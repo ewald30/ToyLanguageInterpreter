@@ -81,7 +81,7 @@ public class IfStatement implements StatementInterface {
         else
             throw new InvalidTypeException("Conditional expression should be boolean!");
 
-        return state;
+        return null;
     }
 
     @Override
