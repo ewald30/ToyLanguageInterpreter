@@ -8,6 +8,7 @@ import Model.ProgramState;
 import Model.Statements.*;
 import Model.Types.BoolType;
 import Model.Types.IntType;
+import Model.Types.ReferenceType;
 import Model.Types.StringType;
 import Model.Values.BoolValue;
 import Model.Values.IntValue;
@@ -140,6 +141,11 @@ public class Interpreter {
         controller5.addProgram(ProgramState5);
         textMenu.addCommand(new RunExampleCommand("5", example5.toString() + "EMPTY FILE", controller5));
 
+
+
+
+
+        //  Sixth program example using the while loop
         var example6 = connectStatements(new StatementInterface[]{
                 new VariableDeclarationStatement("v", new IntType()),
                 new AssignStatement("v", new ValueExpression(new IntValue(4))),
@@ -153,12 +159,37 @@ public class Interpreter {
                         new PrintStatement(new VariableExpression("v"))
                         //v-1
         });
+
         var ProgramState6 = new ProgramState(executionStack, symbolTable, example6, output, fileTable, heap);
         var repository6 = new Repository("logFile6.txt");
         var controller6 = new Controller(repository6);
         controller6.addProgram(ProgramState6);
         textMenu.addCommand(new RunExampleCommand("6", example6.toString(), controller6));
+
+
+
+
+
+
+        //Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);
+        var example7 = connectStatements(new StatementInterface[]{
+                new VariableDeclarationStatement("v", new ReferenceType(new IntType())),            //  Add a new reference pf type int
+                new NewStatement("v", new ValueExpression(new IntValue(20))),                 //  Allocate a new integer of value 20 at address v
+                new VariableDeclarationStatement("a", new ReferenceType(new ReferenceType(new IntType()))),     // ref ref int a
+                new NewStatement("a", new VariableExpression("v")),                         //  Allocate a new reference to the v reference
+                new NewStatement("v", new ValueExpression(new IntValue(30))),
+                new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a"))))
+        });
+
+        var ProgramState7 = new ProgramState(executionStack, symbolTable, example7, output, fileTable, heap);
+        var repository7 = new Repository("logFile7.txt");
+        var controller7 = new Controller(repository7);
+        controller7.addProgram(ProgramState7);
+        textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));
         textMenu.show();
+        textMenu.show();
+
+
 
     }
 }

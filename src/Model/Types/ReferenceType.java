@@ -12,7 +12,7 @@ public class ReferenceType implements TypeInterface{
     }
 
     public TypeInterface getInner() {
-        //  Getter for reference tyoe
+        //  Getter for reference type
         return inner;
     }
 

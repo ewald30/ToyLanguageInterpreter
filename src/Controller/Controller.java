@@ -3,9 +3,15 @@ package Controller;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.*;
 import Model.Statements.StatementInterface;
+import Model.Values.ReferenceValue;
+import Model.Values.ValueInterface;
 import Repository.RepositoryInterface;
 import Model.*;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class Controller {
@@ -72,8 +78,60 @@ public class Controller {
 
         while(!programState.getExecutionStack().isEmpty()){
             ProgramState newState = this.singleStepExecution(programState);
+            getAddrFromHeap(newState.getHeap().getContent().values());
             //this.addStepToOutput(newState);
             repository.logProgramState();
+            System.out.println("\nSYm"+ newState.getSymbolTable().getContent().values());
+            System.out.println("\nHeap"+newState.getHeap().getContent().values());
+            newState.getHeap().setContent(GarbageCollector(
+                    getAddrFromSymTable(newState.getSymbolTable().getContent().values()),   //  Get the addresses from the symbol table
+                    getAddrFromHeap(newState.getHeap().getContent().values()),              // Get the addresses from the heap
+                    newState.getHeap().getContent()));
+            repository.logProgramState();
+
         }
+    }
+
+
+    Map<Integer,ValueInterface> GarbageCollector(List<Integer> symTableAddr, List<Integer> heapAddresses, Map<Integer,ValueInterface> heap){
+        /*  Returns a new map used for the heap
+                Steps:  -   creates a new collection from the addresses that are used in the heap OR in the symbol table
+                        -   converts the collection into a map that will be the new heap
+                Throws: None
+                Return: A new map that will be the new heap
+        */
+        Map<Integer, ValueInterface> collection = heap.entrySet().stream()
+                .filter(e -> symTableAddr.contains(e.getKey()) || heapAddresses.contains(e.getKey()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        return collection;
+    }
+
+    List<Integer> getAddrFromSymTable(Collection<ValueInterface> symTableValues){
+        /*  Returns the addresses from the symbol table
+                Steps:  -   Filters values from the symbol table that are of type reference value
+                        -   Adds the address of that value to a new collection
+                Throws: None
+                Return: a list of integers containing all the addresses from the symbol table
+        */
+        List<Integer> symbolTableAddresses = symTableValues.stream()
+                .filter(v -> v instanceof ReferenceValue)
+                .map(v -> { ReferenceValue v1 = (ReferenceValue) v;return v1.getAddress(); })
+                .collect(Collectors.toList());
+        return symbolTableAddresses;
+    }
+
+    List<Integer> getAddrFromHeap(Collection<ValueInterface> heap){
+        /*  Returns the addresses from the heap
+                Steps:  -   Filters values from the heap that are of type reference value
+                        -   Adds the address of that value to a new collection
+                Throws: None
+                Return: a list of integers containing all the addresses from the heap
+        */
+        List<Integer> heapAddresses = heap.stream()
+                .filter(v -> v instanceof ReferenceValue)
+                .map(v -> { ReferenceValue v1 = (ReferenceValue) v;return v1.getAddress(); })
+                .collect(Collectors.toList());
+        return heapAddresses;
+
     }
 }

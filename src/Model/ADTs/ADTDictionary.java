@@ -3,9 +3,10 @@ package Model.ADTs;
 import Model.Exceptions.DictionaryException;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, TValue> {
-    private final HashMap<TKey, TValue> dictionary;
+    private Map<TKey, TValue> dictionary;
 
     public ADTDictionary(){
         /* Creates a new Dictionary
@@ -89,5 +90,15 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
                         - False - if the pair is not found
         */
         return this.dictionary.containsKey(key);
+    }
+
+    @Override
+    public Map<TKey, TValue> getContent() {
+        return dictionary;
+    }
+
+    @Override
+    public void setContent(Map<TKey, TValue> content) {
+        dictionary = content;
     }
 }

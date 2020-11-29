@@ -38,7 +38,7 @@ public class ReferenceValue implements ValueInterface{
     @Override
     public String toString(){
         //  Returns a string representation of the Reference Value
-        return String.valueOf(address) + locationType.toString();
+        return String.valueOf(address) + " " + locationType.toString();
     }
 
 }
