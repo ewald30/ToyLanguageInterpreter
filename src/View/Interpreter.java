@@ -44,7 +44,7 @@ public class Interpreter {
 
 
 
-
+//
 //        //  First program example
 //        var example1 = connectStatements(new StatementInterface[]{
 //                new VariableDeclarationStatement("v", new IntType()),   //  Declare v
@@ -169,27 +169,50 @@ public class Interpreter {
 //
 //
 //
+//
+//
+//        //Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);
+//        var example7 = connectStatements(new StatementInterface[]{
+//                new VariableDeclarationStatement("v", new ReferenceType(new IntType())),            //  Add a new reference pf type int
+//                new NewStatement("v", new ValueExpression(new IntValue(20))),                 //  Allocate a new integer of value 20 at address v
+//                new VariableDeclarationStatement("a", new ReferenceType(new ReferenceType(new IntType()))),     // ref ref int a
+//                new NewStatement("a", new VariableExpression("v")),                         //  Allocate a new reference to the v reference
+//                new NewStatement("v", new ValueExpression(new IntValue(30))),
+//                new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a"))))
+//        });
+//
+//        var ProgramState7 = new ProgramState(executionStack, symbolTable, example7, output, fileTable, heap);
+//        var repository7 = new Repository("logFile7.txt");
+//        var controller7 = new Controller(repository7);
+//        controller7.addProgram(ProgramState7);
+//        textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));
+//        textMenu.show();
+//        textMenu.show();
 
 
-        //Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);
-        var example7 = connectStatements(new StatementInterface[]{
-                new VariableDeclarationStatement("v", new ReferenceType(new IntType())),            //  Add a new reference pf type int
-                new NewStatement("v", new ValueExpression(new IntValue(20))),                 //  Allocate a new integer of value 20 at address v
-                new VariableDeclarationStatement("a", new ReferenceType(new ReferenceType(new IntType()))),     // ref ref int a
-                new NewStatement("a", new VariableExpression("v")),                         //  Allocate a new reference to the v reference
-                new NewStatement("v", new ValueExpression(new IntValue(30))),
-                new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a"))))
+        //int v; Ref int a; v=10;new(a,22);
+        //fork(wH(a,30);v=32;print(v);print(rH(a)));
+        // print(v);print(rH(a))
+
+        var example8 = connectStatements(new StatementInterface[]{
+                new VariableDeclarationStatement("v", new IntType()),                       //  int v
+                new VariableDeclarationStatement("a", new ReferenceType(new IntType())),    //  ref int a
+                new AssignStatement("v", new ValueExpression(new IntValue(10))),            //  v=10
+                new NewStatement("a", new ValueExpression(new IntValue(22))),         //  new(a,22)
+                new ForkStatement(connectStatements(new StatementInterface[]{
+                        new WriteHeapStatement("a", new ValueExpression(new IntValue(30))),
+                        new AssignStatement("v", new ValueExpression(new IntValue(32))),
+                        new PrintStatement(new VariableExpression("v")),
+                        new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
+                })),
+                new PrintStatement(new VariableExpression("v")),
+                new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
         });
-
-        var ProgramState7 = new ProgramState(executionStack, symbolTable, example7, output, fileTable, heap);
-        var repository7 = new Repository("logFile7.txt");
-        var controller7 = new Controller(repository7);
-        controller7.addProgram(ProgramState7);
-        textMenu.addCommand(new RunExampleCommand("7", example7.toString(), controller7));
+        var ProgramState8 = new ProgramState(executionStack, symbolTable, example8, output, fileTable, heap);
+        var repository8 = new Repository("logfile8.txt");
+        var controller8 = new Controller(repository8);
+        controller8.addProgram(ProgramState8);
+        textMenu.addCommand(new RunExampleCommand("8", example8.toString(), controller8));
         textMenu.show();
-        textMenu.show();
-
-
-
     }
 }

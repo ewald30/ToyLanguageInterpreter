@@ -54,14 +54,16 @@ public class Repository implements RepositoryInterface {
                 Return: None
         */
 
-        try{
-            var logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
-            System.out.println(programState.toString());
-            logFile.println(programState.toString());
-        } catch (IOException exception){
-            throw new FileException("Logging program state returned an error: " + exception.getMessage());
-        }
+            try {
+                try (var logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)))){
+                    logFile.println(programState.toString());
+                }
+            }
+            catch (IOException expcetion){
+                throw new FileException("Logging program state returned an error: " + expcetion.getMessage());
+            }
     }
+
 
     @Override
     public void addProgramState(ProgramState newProgramState) {

@@ -1,0 +1,3834 @@
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((Ref(int) v; New(v, 20)); Ref(Ref(int)) a); New(a, v)); New(v, 30)); print (rh rh a)), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((Ref(int) v; New(v, 20)); Ref(Ref(int)) a); New(a, v)); New(v, 30)), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((Ref(int) v; New(v, 20)); Ref(Ref(int)) a); New(a, v)); New(v, 30)), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((Ref(int) v; New(v, 20)); Ref(Ref(int)) a); New(a, v)), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((Ref(int) v; New(v, 20)); Ref(Ref(int)) a); New(a, v)), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((Ref(int) v; New(v, 20)); Ref(Ref(int)) a), New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((Ref(int) v; New(v, 20)); Ref(Ref(int)) a), New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (Ref(int) v; New(v, 20)), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (Ref(int) v; New(v, 20)), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: Ref(int) v, New(v, 20), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: Ref(int) v, New(v, 20), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(v, 20), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: v -> 0 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(v, 20), Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: v -> 0 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: Ref(Ref(int)) a, New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 0 Ref(int); v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(a, v), New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 0 Ref(int); v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: New(v, 30), print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (rh rh a), (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))); print (v)), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((int v; v = 4); while(v > 0) then ((print (v); v = v - 1))), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (int v; v = 4), while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (int v; v = 4), while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, v = 4, while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, v = 4, while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: v = 4, while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: v = 4, while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: while(v > 0) then ((print (v); v = v - 1)), print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = testEmpty.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = testEmpty.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = testEmpty.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = testEmpty.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = testEmpty.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: string varf, varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: string varf, varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> ; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: varf = testEmpty.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> ; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: CloseRFile(varf), ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: testEmpty.in -> java.io.BufferedReader@3eb07fd3; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)); CloseRFile(varf)), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)); print (varc)), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)); ReadFile(varfvarc)), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)); print (varc)), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((((string varf; varf = test.in); OpenRFile(varf)); int varc); ReadFile(varfvarc)), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = test.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((string varf; varf = test.in); OpenRFile(varf)); int varc), ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = test.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((string varf; varf = test.in); OpenRFile(varf)), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = test.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (string varf; varf = test.in), OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: string varf, varf = test.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: string varf, varf = test.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: varf = test.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: varf = test.in, OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> testEmpty.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: OpenRFile(varf), int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int varc, ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 0; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 15; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 15; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 15; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ReadFile(varfvarc), print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 15; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (varc), CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: CloseRFile(varf), (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: test.in -> java.io.BufferedReader@506c589e; 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((bool a; int v); ( if(a) then (v = true) else (v = 3))); print (v)), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((bool a; int v); ( if(a) then (v = true) else (v = 3))), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((bool a; int v); ( if(a) then (v = true) else (v = 3))), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (bool a; int v), ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (bool a; int v), ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: bool a, int v, ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: bool a, int v, ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ( if(a) then (v = true) else (v = 3)), print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (((bool a; int v); ( if(a) then (v = 2) else (v = 3))); print (v)), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((bool a; int v); ( if(a) then (v = 2) else (v = 3))), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((bool a; int v); ( if(a) then (v = 2) else (v = 3))), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (bool a; int v), ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (bool a; int v), ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: bool a, int v, ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: bool a, int v, ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ( if(a) then (v = 2) else (v = 3)), print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: ((int v; v = 2); print (v)), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (int v; v = 2), print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: (int v; v = 2), print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, v = 2, print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: int v, v = 2, print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: v = 2, print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: v = 2, print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: print (v), 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,
+    -------------------------------------
+
+
+
+
+   --------------------------------------
+        ID: 0
+    -------------------------------------
+
+   --------------------------------------
+        Execution Stack: 
+    -------------------------------------
+
+    -------------------------------------
+        Symbol Table: a -> 2 Ref(int); v -> 3 int; varf -> test.in; varc -> 50; 
+    -------------------------------------
+
+    -------------------------------------
+        File Table: 
+    -------------------------------------
+
+    -------------------------------------
+        Heap: 1 -> 20; 2 -> 1 int; 3 -> 30; 
+    -------------------------------------
+
+    -------------------------------------
+        Output: 20,3 int,0,0,15,50,3 int,3 int,3 int,
+    -------------------------------------
+
+
+
+
