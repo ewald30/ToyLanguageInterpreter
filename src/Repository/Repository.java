@@ -56,6 +56,7 @@ public class Repository implements RepositoryInterface {
 
         try{
             var logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
+            System.out.println(programState.toString());
             logFile.println(programState.toString());
         } catch (IOException exception){
             throw new FileException("Logging program state returned an error: " + exception.getMessage());

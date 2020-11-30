@@ -1,0 +1,5 @@
+
+the program works fine but
+    1   we don't have separate executionstack/symtable/filetable...etc for the 7 examples => lots of errors
+    2   it doesn't log the states to the file properly even tho it prints the states ok check what is not working
+    

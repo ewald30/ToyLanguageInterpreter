@@ -35,6 +35,7 @@ public class Controller {
     public void addProgram(ProgramState programState){
         //  Adds a new program state to the repository
         this.repository.addProgramState(programState);
+        programState.getExecutionStack().push(programState.getOriginalProgram());
     }
 
     public String getOutput() throws ListException {
@@ -104,9 +105,9 @@ public class Controller {
                     try {
                         return future.get();
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        System.out.println(e.getMessage());;
                     } catch (ExecutionException e) {
-                        e.printStackTrace();
+                        System.out.println(e.getMessage());;
                     }
                     return null;
                 })
