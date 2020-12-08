@@ -94,6 +94,9 @@ public class Controller {
             }
         });
 
+
+
+
         //  Construct the list of callables
         List<Callable<ProgramState>> callables = programs.stream()
                 .map((ProgramState p) -> (Callable<ProgramState>) (() -> { return p.oneStep();}))
@@ -119,6 +122,11 @@ public class Controller {
         programs.forEach(p-> {
             try {
                 repository.logProgramState(p);
+                p.getHeap().setContent(GarbageCollector(
+                        getAddrFromSymTable(p.getSymbolTable().getContent().values()),
+                        getAddrFromHeap(p.getHeap().getContent().values()),
+                        p.getHeap().getContent()
+                ));
             } catch (FileException e) {
                 e.printStackTrace();
             }
@@ -137,6 +145,9 @@ public class Controller {
 
 
         while (programs.size() > 0){
+            //this.addStepToOutput(newState);
+
+
             //  Add here the garbage collector
             singleStepForAllPrograms(programs);
             programs = (ArrayList<ProgramState>)removeCompletedPrograms(programs);

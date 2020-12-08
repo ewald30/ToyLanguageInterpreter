@@ -18,7 +18,7 @@ public class ProgramState {
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
     ADTHeapInterface<Integer, ValueInterface> heap;
-    static int ID;
+    int ID;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack,
                         ADTDicionaryInterface<String, ValueInterface> symbolTable,
@@ -45,12 +45,12 @@ public class ProgramState {
         return result;
     }
 
-    synchronized public static int getId() {
+    public int getId() {
         //  Returns the id of the program state
         return ID;
     }
 
-    synchronized public static void setId(int id) {
+    public void setId(int id) {
         //  Returns the di of the program state
         ID = id;
     }

@@ -38,7 +38,10 @@ public class ForkStatement implements StatementInterface{
         symbolTable.setContent(state.getSymbolTable().deepCopy());
 
         ProgramState childProgramState = new ProgramState(executionStack, symbolTable, statement,state.getOutput(), state.getFileTable(), state.getHeap());
+        state.setId(childProgramState.getId() + 1);
         return childProgramState;
+
+
 
     }
 

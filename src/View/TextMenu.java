@@ -42,7 +42,6 @@ public class TextMenu {
                 continue;
             }
             com.execute();
-            break;
         }
     }
 }
