@@ -4,6 +4,7 @@ import Model.ADTs.ADTList;
 import Model.ADTs.ADTListInterface;
 import Model.Exceptions.FileException;
 import Model.Exceptions.ListException;
+import Model.Exceptions.MyException;
 import Model.ProgramState;
 
 import java.io.BufferedWriter;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public class Repository implements RepositoryInterface {
     ArrayList<ProgramState> programStates;
     String logFilePath;
+
 
     public Repository(String logFilePath){
         this.logFilePath = logFilePath;
@@ -29,6 +31,7 @@ public class Repository implements RepositoryInterface {
     public void setLogFilePath(String logFilePath) {
         //  Setter for log file path
         this.logFilePath = logFilePath;
+        System.out.println("repo file updated");
     }
 
     public ArrayList<ProgramState> getProgramStates() {
@@ -48,7 +51,7 @@ public class Repository implements RepositoryInterface {
 //    }
 
     @Override
-    public void logProgramState(ProgramState programState) throws FileException{
+    public void logProgramState(ProgramState programState) throws MyException {
         /*  Logs the state of a given program to a log file
                 Throws: -   FileException if when writing into a file an error occurred
                 Return: None

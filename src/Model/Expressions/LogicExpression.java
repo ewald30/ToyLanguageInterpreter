@@ -3,7 +3,10 @@ package Model.Expressions;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
+import Model.Exceptions.MyException;
 import Model.Types.BoolType;
+import Model.Types.TypeInterface;
 import Model.Values.BoolValue;
 import Model.Values.ValueInterface;
 
@@ -54,7 +57,7 @@ public class LogicExpression implements ExpressionInterface {
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
         /*  Evaluates a logic expression
                 Steps:  -   Get the type of the operands from the SymbolTable
                         -   Check if both of them are boolean
@@ -92,6 +95,26 @@ public class LogicExpression implements ExpressionInterface {
             else throw new EvaluationException("Operand 2 should be boolean!");
         }
         else throw new EvaluationException("Operand 1 should be boolean");
+    }
+
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        /*  Checks the type of the two expressions
+                Throws: InvalidTypeException if one of the expression is not of bool type
+                Return: BoolType of no expcetion is deployed
+        */
+        TypeInterface type1, type2;
+        type1 = expression1.TypeCheck(typeEnv);
+        type2 = expression2.TypeCheck(typeEnv);
+
+        if (!type1.equals(new BoolType()))
+            throw new InvalidTypeException("The type of: " + this.expression1.toString() + " should be BoolType!");
+
+        if (!type2.equals(new BoolType()))
+            throw new InvalidTypeException("The type of: " + this.expression2.toString() + " should be BoolType!");
+
+        return new BoolType();
+
     }
 
     @Override

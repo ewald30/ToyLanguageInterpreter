@@ -1,6 +1,6 @@
 package Model.Exceptions;
 
-public class DictionaryException extends ADTException {
+public class DictionaryException extends MyException {
     public DictionaryException(String message){
         super(message);
     }

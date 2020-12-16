@@ -1,9 +1,11 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.ReferenceType;
+import Model.Types.TypeInterface;
 import Model.Values.ReferenceValue;
 
 public class NewStatement implements StatementInterface{
@@ -17,7 +19,7 @@ public class NewStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*`Executes a new statement
                 Steps   -   get the heap and the symbol table
                         -   check the validity of the variable name
@@ -50,6 +52,18 @@ public class NewStatement implements StatementInterface{
         symbolTable.update(variableName, new ReferenceValue(address, variableValue.getLocationType()));
         return null;
 
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the type of the variable name and the reference
+        TypeInterface var_type = typeEnv.lookup(this.variableName);
+        TypeInterface expr_type = expression.TypeCheck(typeEnv);
+
+        if (!var_type.equals(new ReferenceType(expr_type)))
+            throw new InvalidTypeException("NEW stmt: right hand side and left hand side have different types!");
+
+        return typeEnv;
     }
 
     @Override

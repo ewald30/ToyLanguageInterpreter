@@ -1,6 +1,6 @@
 package Model.Exceptions;
 
-public class ListException extends ADTException{
+public class ListException extends MyException{
     public ListException(String message){
         super(message);
     }

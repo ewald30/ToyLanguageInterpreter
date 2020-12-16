@@ -3,7 +3,11 @@ package Model.Expressions;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
+import Model.Types.TypeInterface;
 import Model.Values.ValueInterface;
+
+import java.util.Dictionary;
 
 public class VariableExpression implements ExpressionInterface {
     String id;
@@ -14,13 +18,19 @@ public class VariableExpression implements ExpressionInterface {
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws  DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws  MyException {
         /*
             Returns the result given by the symbol table
                 Throws: Dictionary exception if something is wrong in lookup method of SymbolTable
                 Return: Result given by SymbolTable
         */
         return symbolTable.lookup(id);
+    }
+
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Returns the type found at the given id
+        return typeEnv.lookup(id);
     }
 
     @Override

@@ -6,8 +6,10 @@ import Model.ADTs.ADTStack;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
 import Model.Exceptions.StatementException;
 import Model.ProgramState;
+import Model.Types.TypeInterface;
 import Model.Values.ValueInterface;
 
 public class ForkStatement implements StatementInterface{
@@ -29,7 +31,14 @@ public class ForkStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
+        /*  Executes an fork statement
+                Steps:  -   Creates a new execution stack with the given statement in it
+                        -   Creates a copy of the symbol table
+                        -   Creates a new program state that will be executed in parallel
+                Throws: None
+                Return: A new program state
+        */
         ADTStackInterface<StatementInterface> executionStack =  new ADTStack<StatementInterface>();
         executionStack.push(statement);
 
@@ -40,9 +49,13 @@ public class ForkStatement implements StatementInterface{
         ProgramState childProgramState = new ProgramState(executionStack, symbolTable, statement,state.getOutput(), state.getFileTable(), state.getHeap());
         state.setId(childProgramState.getId() + 1);
         return childProgramState;
+    }
 
-
-
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the type of the statement
+        statement.TypeCheck(typeEnv);
+        return typeEnv;
     }
 
     @Override

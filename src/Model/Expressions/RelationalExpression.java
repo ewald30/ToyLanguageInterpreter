@@ -3,7 +3,11 @@ package Model.Expressions;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
+import Model.Exceptions.MyException;
+import Model.Types.BoolType;
 import Model.Types.IntType;
+import Model.Types.TypeInterface;
 import Model.Values.BoolValue;
 import Model.Values.IntValue;
 import Model.Values.ValueInterface;
@@ -53,7 +57,7 @@ public class RelationalExpression implements ExpressionInterface{
 
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
         var valueExpression1 = this.expression1.evaluate(symbolTable, heap);
         var valueExpression2 = this.expression2.evaluate(symbolTable, heap);
 
@@ -85,6 +89,25 @@ public class RelationalExpression implements ExpressionInterface{
             return new BoolValue(realValue1.getValue() >= realValue2.getValue());
 
         return null;
+    }
+
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        /*  Checks the type of the two expressions
+                Throws: InvalidTypeException if one of the expression is not of int type
+                Return: IntType of no exception is deployed
+        */
+        TypeInterface type1, type2;
+        type1 = expression1.TypeCheck(typeEnv);
+        type2 = expression2.TypeCheck(typeEnv);
+
+        if (!type1.equals(new IntType()))
+            throw new InvalidTypeException("The type of: " + expression1.toString() + " should be IntType!");
+
+        if (!type2.equals(new IntType()))
+            throw new InvalidTypeException("The type of: " + expression2.toString() + " should be IntType!");
+
+        return new BoolType();
     }
 
     @Override

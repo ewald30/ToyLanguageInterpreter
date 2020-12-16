@@ -1,12 +1,11 @@
 package Model.Statements;
 
-import Model.Exceptions.DictionaryException;
-import Model.Exceptions.EvaluationException;
-import Model.Exceptions.InvalidTypeException;
-import Model.Exceptions.StatementException;
+import Model.ADTs.ADTDicionaryInterface;
+import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.BoolType;
+import Model.Types.TypeInterface;
 import Model.Values.BoolValue;
 
 public class WhileStatement implements StatementInterface{
@@ -20,7 +19,7 @@ public class WhileStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Executes a while statement
                 Steps:  -   Get the heap, symbol table, execution stack
                         -   Evaluate the condition and check whether the type of the condition is bool
@@ -45,6 +44,18 @@ public class WhileStatement implements StatementInterface{
             executionStack.push(statement);
         }
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the condition and the statement of the while statement
+        TypeInterface expr_type = expression.TypeCheck(typeEnv);
+
+        if (!expr_type.equals(new BoolType()))
+            throw new InvalidTypeException("The type of the while condition: " + this.expression.toString() + " should be BoolType!");
+
+        statement.TypeCheck(typeEnv);
+        return typeEnv;
     }
 
     public ExpressionInterface getExpression() {

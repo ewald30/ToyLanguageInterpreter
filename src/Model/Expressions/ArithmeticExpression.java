@@ -3,7 +3,10 @@ package Model.Expressions;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
+import Model.Exceptions.MyException;
 import Model.Types.IntType;
+import Model.Types.TypeInterface;
 import Model.Values.IntValue;
 import Model.Values.ValueInterface;
 
@@ -54,7 +57,7 @@ public class ArithmeticExpression implements ExpressionInterface{
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
         /*  Evaluates an arithmetic expression
                 Steps:  -   Get the type of the operands from the SymbolTable
                         -   Check if both of them are integers
@@ -102,6 +105,26 @@ public class ArithmeticExpression implements ExpressionInterface{
 
     }
 
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        /*  Checks the type of the operands
+                Throws: InvalidTypeException if the type of an operand is not IntType
+                Return: IntType of no exception is deployed
+        */
+        TypeInterface type1, type2;
+        type1 = expression1.TypeCheck(typeEnv);
+        type2 = expression2.TypeCheck(typeEnv);
+
+        if ( !type1.equals(new IntType()))
+            throw new InvalidTypeException("The type of: " + this.expression1.toString() + " should be IntType!");
+
+
+        if (!type2.equals(new IntType()))
+            throw new InvalidTypeException("The type of: " + this.expression2.toString() + " should be IntType!");
+
+
+        return new IntType();
+    }
 
     @Override
     public String toString() {

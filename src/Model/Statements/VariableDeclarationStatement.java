@@ -3,6 +3,7 @@ package Model.Statements;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
 import Model.Exceptions.StatementException;
 import Model.ProgramState;
 import Model.Types.TypeInterface;
@@ -39,7 +40,7 @@ public class VariableDeclarationStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Declares a variable in the symbol table and assigns it the default value
                 Throws: StatementException - if the variable is already delcared
                 Return: State of the program after the execution of variable declaration statement
@@ -52,6 +53,13 @@ public class VariableDeclarationStatement implements StatementInterface {
             symbolTable.add(this.Id, type.defaultValue());
 
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Creates a new entry in the type table
+        typeEnv.add(this.Id, this.type);
+        return typeEnv;
     }
 
     @Override

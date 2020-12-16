@@ -33,7 +33,7 @@ public class OpenRFileStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Opens a file and adds it to the file table
                 Steps:  -   Get the file table and symbol table
                         -   Check if the expression is of String Type
@@ -66,6 +66,18 @@ public class OpenRFileStatement implements StatementInterface {
 
         fileTable.add(fileNameString, fileReader);
         return null;
+
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the type of the expression
+        TypeInterface expr_type = expression.TypeCheck(typeEnv);
+
+        if (!expr_type.equals(new StringType()))
+            throw new InvalidTypeException("Invalid type of file name! Expected: String, got: "+expr_type);
+
+        return typeEnv;
 
     }
 

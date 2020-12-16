@@ -7,6 +7,7 @@ import Model.Expressions.ValueExpression;
 import Model.ProgramState;
 import Model.Types.IntType;
 import Model.Types.StringType;
+import Model.Types.TypeInterface;
 import Model.Values.IntValue;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
@@ -24,7 +25,7 @@ public class ReadFileStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Reads a line from a file, converts it to an integer value, and adds it to the symbol table
                 Steps:  -   Check if file is of string type and the variable to store the integer is of int type
                         -   Check if the file is defined in file table and the variable in the symbol table
@@ -76,6 +77,21 @@ public class ReadFileStatement implements StatementInterface{
         //  Add the new int value to the symbol table
         symbolTable.update(variableName, new IntValue(number));
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the type of the filename and the type of the variable to read from the file
+        TypeInterface expr_type = expression.TypeCheck(typeEnv);
+        TypeInterface var_type = typeEnv.lookup(this.variableName);
+
+        if (!expr_type.equals(new StringType()))
+            throw new InvalidTypeException("Invalid type of file name. Expected: String, got: " + var_type.toString());
+
+        if (!var_type.equals(new IntType()))
+            throw new InvalidTypeException("The type of variable: " + variableName + "should be int");
+
+        return typeEnv;
     }
 
     @Override

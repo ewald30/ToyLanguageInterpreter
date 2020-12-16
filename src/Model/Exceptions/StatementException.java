@@ -1,6 +1,6 @@
 package Model.Exceptions;
 
-public class StatementException extends java.lang.Exception{
+public class StatementException extends MyException{
     public StatementException(String message){
         super(message);
     }

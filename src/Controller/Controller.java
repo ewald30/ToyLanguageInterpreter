@@ -26,6 +26,16 @@ public class Controller {
     StringBuilder allSteptsStringRepresentation;
     ExecutorService executor;
 
+    public void SetRepositoryFile(String filePath){
+        //  Setter for the log file stored in repository
+        repository.setLogFilePath(filePath);
+    }
+
+    public String GetRepositoryFile(){
+        //  Getter for the log file stored in repository
+        return repository.getLogFilePath();
+    }
+
     public Controller(RepositoryInterface repository) {
         //  Constructor of the controller
         this.repository = repository;
@@ -89,7 +99,7 @@ public class Controller {
         programs.forEach(p -> {
             try {
                 repository.logProgramState(p);
-            } catch (FileException e) {
+            } catch (MyException e) {
                 e.printStackTrace();
             }
         });
@@ -127,7 +137,7 @@ public class Controller {
                         getAddrFromHeap(p.getHeap().getContent().values()),
                         p.getHeap().getContent()
                 ));
-            } catch (FileException e) {
+            } catch (MyException e) {
                 e.printStackTrace();
             }
         });
@@ -138,7 +148,7 @@ public class Controller {
     }
 
 
-    public void allStepsExecution() throws ListException, EvaluationException, StatementException, StackException, DictionaryException, InterruptedException {
+    public void allStepsExecution() throws MyException, InterruptedException {
 
         executor = Executors.newFixedThreadPool(2);
         ArrayList<ProgramState> programs = (ArrayList<ProgramState>)removeCompletedPrograms(repository.getProgramStates());

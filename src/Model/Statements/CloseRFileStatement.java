@@ -5,6 +5,7 @@ import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.StringType;
+import Model.Types.TypeInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
 
@@ -20,7 +21,7 @@ public class CloseRFileStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Closes a file and removes if from file table
                 Steps:  -   Get the file table and evaluate the expression
                         -   Check if the filename is of String type
@@ -53,6 +54,15 @@ public class CloseRFileStatement implements StatementInterface{
 
         fileTable.remove(fileNameString);
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        TypeInterface  expr_type = expression.TypeCheck(typeEnv);
+
+        if (!expr_type.equals(new StringType()))
+            throw new InvalidTypeException("Expression type should be StringType!");
+        return typeEnv;
     }
 
     @Override

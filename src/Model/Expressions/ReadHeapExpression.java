@@ -3,7 +3,10 @@ package Model.Expressions;
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.InvalidTypeException;
+import Model.Exceptions.MyException;
 import Model.Types.ReferenceType;
+import Model.Types.TypeInterface;
 import Model.Values.ReferenceValue;
 import Model.Values.ValueInterface;
 
@@ -33,7 +36,7 @@ public class ReadHeapExpression implements ExpressionInterface{
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException, DictionaryException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
         /*  Evaluates an read from heap expression
                 Steps:  -   evaluates the expression as an reference value
                         -   if the address is defined in the heap return the value
@@ -51,6 +54,23 @@ public class ReadHeapExpression implements ExpressionInterface{
             throw new EvaluationException("The address is invalid!");
 
         return heap.lookup(((ReferenceValue) expressionValue).getAddress());
+
+    }
+
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        /*  Checks if an expression is of type ReferenceType
+                Throws: InvalidTypeExpression if the type of expression is not ReferenceType
+                Return: The inner content of reference stype
+        */
+        TypeInterface type;
+        type = expression.TypeCheck(typeEnv);
+        if (!(type instanceof ReferenceType))
+            throw new InvalidTypeException("The type of: " + expression.toString() + " should be ReferenceType");
+
+        ReferenceType refType = (ReferenceType) type;
+        return refType.getInner();
+
 
     }
 

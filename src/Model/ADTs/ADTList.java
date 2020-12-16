@@ -1,6 +1,7 @@
 package Model.ADTs;
 
 import Model.Exceptions.ListException;
+import Model.Exceptions.MyException;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ADTList<TValue> implements ADTListInterface<TValue> {
     }
 
     @Override
-    public TValue pop() throws ListException{
+    public TValue pop() throws MyException {
         /*  Executes a pop operation on the list
                 Throws: ListException if list is empty
                 Return: (TValue) value found at position 0 in list

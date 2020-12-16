@@ -4,9 +4,11 @@ import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTListInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
 import Model.Exceptions.StatementException;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
+import Model.Types.TypeInterface;
 import Model.Values.ValueInterface;
 
 public class PrintStatement implements StatementInterface {
@@ -18,7 +20,7 @@ public class PrintStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Builds the output of the program
                 Throws: None
                 Return: state of the program after output has been updated
@@ -35,6 +37,13 @@ public class PrintStatement implements StatementInterface {
     public StatementInterface deepCopy() {
         //  Creates a deepcopy of the print statement
         return new PrintStatement(this.expression.deepCopy());
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Returns the updated type table after the type check of the expression
+        expression.TypeCheck(typeEnv);
+        return typeEnv;
     }
 
     @Override

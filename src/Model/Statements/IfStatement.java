@@ -2,10 +2,7 @@ package Model.Statements;
 
 import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
-import Model.Exceptions.DictionaryException;
-import Model.Exceptions.EvaluationException;
-import Model.Exceptions.InvalidTypeException;
-import Model.Exceptions.StatementException;
+import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.BoolType;
@@ -56,7 +53,7 @@ public class IfStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Checks to see if an if statement can be executed and changes the state of the program if that's the case
                 Stepts: -   Get the type of the expression and check if it is bool
                         -   If so, execute the if statement and push on the executionStack thenStatement or the elseStatement
@@ -82,6 +79,20 @@ public class IfStatement implements StatementInterface {
             throw new InvalidTypeException("Conditional expression should be boolean!");
 
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Returns the new type table after the expression and the two statements are checked
+        TypeInterface expr_tyoe = expression.TypeCheck(typeEnv);
+
+        if (!expr_tyoe.equals(new BoolType()))
+            throw new InvalidTypeException("Condidion: " + this.expression.toString() + " should be of BoolType!");
+
+        thenStatement.TypeCheck(typeEnv);
+        elseStatement.TypeCheck(typeEnv);
+        return typeEnv;
+
     }
 
     @Override

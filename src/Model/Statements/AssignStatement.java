@@ -2,10 +2,7 @@ package Model.Statements;
 
 import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
-import Model.Exceptions.DictionaryException;
-import Model.Exceptions.EvaluationException;
-import Model.Exceptions.InvalidTypeException;
-import Model.Exceptions.StatementException;
+import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.TypeInterface;
@@ -42,7 +39,7 @@ public class AssignStatement implements StatementInterface {
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Executes an assignment statement
                 Steps:  -   Get the current execution Stack
                         -   Get the current symboltable
@@ -69,6 +66,19 @@ public class AssignStatement implements StatementInterface {
         }
         else throw new StatementException("Variable " + this.Id + " was not yet delcared\n");
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks if the variable type is equal to the expression type
+        TypeInterface type_var = typeEnv.lookup(Id);
+        TypeInterface type_expr = expression.TypeCheck(typeEnv);
+
+        if (!type_expr.equals(type_var)) {
+            throw new InvalidTypeException("Type of: " + this.Id + " does not match the type of: " + this.expression.toString());
+        }
+
+        return typeEnv;
     }
 
     @Override

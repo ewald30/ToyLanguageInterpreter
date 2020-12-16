@@ -1,10 +1,13 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.DictionaryException;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
 import Model.Exceptions.StatementException;
 import Model.ProgramState;
+import Model.Types.TypeInterface;
 
 public class CompoundStatement implements StatementInterface{
     StatementInterface statement1;
@@ -37,7 +40,7 @@ public class CompoundStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Returns the state of the program after the changes occur
                 Throws: None
                 Return: state of the program after the 2 statements have been pushed to the execution stack
@@ -47,6 +50,12 @@ public class CompoundStatement implements StatementInterface{
         exeStack.push(this.statement1);
 
         return null;
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Checks the type of the two statements
+        return statement2.TypeCheck(statement1.TypeCheck(typeEnv));
     }
 
     @Override

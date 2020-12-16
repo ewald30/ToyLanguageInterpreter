@@ -2,7 +2,11 @@ package Model.Expressions;
 
 import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.EvaluationException;
+import Model.Exceptions.MyException;
+import Model.Types.TypeInterface;
 import Model.Values.ValueInterface;
+
+import java.util.Dictionary;
 
 public class ValueExpression implements ExpressionInterface{
     ValueInterface value;
@@ -23,9 +27,15 @@ public class ValueExpression implements ExpressionInterface{
     }
 
     @Override
-    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws EvaluationException {
+    public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
         //  Returns the value of the expression
         return this.value;
+    }
+
+    @Override
+    public TypeInterface TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        //  Returns the type of the value
+        return value.getType();
     }
 
     @Override

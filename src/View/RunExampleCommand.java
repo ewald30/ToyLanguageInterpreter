@@ -2,6 +2,7 @@ package View;
 
 import Controller.Controller;
 import Model.Exceptions.*;
+import java.util.Scanner;
 
 public class RunExampleCommand extends Command{
     private Controller controller;
@@ -19,8 +20,14 @@ public class RunExampleCommand extends Command{
                 Return: None
         */
         try{
-            controller.allStepsExecution();
+            Scanner scannerObj = new Scanner(System.in);
+            System.out.println("Enter the path of the log file or hit enter to skip.\n");
+            String logFilePath = scannerObj.nextLine();
 
+            if (!logFilePath.equals("")) {
+                controller.SetRepositoryFile(logFilePath);
+            }
+            controller.allStepsExecution();
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }

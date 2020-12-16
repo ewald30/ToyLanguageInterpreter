@@ -1,4 +1,5 @@
 package Model.ADTs;
+import Model.Exceptions.MyException;
 import Model.Exceptions.StackException;
 
 import java.util.Stack;
@@ -24,7 +25,7 @@ public class ADTStack<TValue> implements ADTStackInterface<TValue> {
     }
 
     @Override
-    public TValue pop() throws StackException{
+    public TValue pop() throws MyException {
         /*  Pops a value from the Stack
                 Throws: StackException if the stack is empty
                 Return: (TValue) Value found at the top of the stack

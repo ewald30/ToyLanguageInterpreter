@@ -1,9 +1,11 @@
 package Model.Statements;
 
+import Model.ADTs.ADTDicionaryInterface;
 import Model.Exceptions.*;
 import Model.Expressions.ExpressionInterface;
 import Model.ProgramState;
 import Model.Types.ReferenceType;
+import Model.Types.TypeInterface;
 import Model.Values.ReferenceValue;
 
 public class WriteHeapStatement implements StatementInterface{
@@ -17,7 +19,7 @@ public class WriteHeapStatement implements StatementInterface{
     }
 
     @Override
-    public ProgramState execute(ProgramState state) throws StatementException, EvaluationException, DictionaryException {
+    public ProgramState execute(ProgramState state) throws MyException {
         /*  Writes an expression to the heap
                 Steps:  -   Get the symbol table and the heap
                         -   check if the variable is defined in the symbol table
@@ -59,6 +61,17 @@ public class WriteHeapStatement implements StatementInterface{
     public String toString(){
         //  Returns a string representation of the statement
         return "wh(" + this.variableName + ", " + this.expression.toString() + ")";
+    }
+
+    @Override
+    public ADTDicionaryInterface<String, TypeInterface> TypeCheck(ADTDicionaryInterface<String, TypeInterface> typeEnv) throws MyException {
+        TypeInterface var_type = typeEnv.lookup(variableName);
+        TypeInterface expr_type = expression.TypeCheck(typeEnv);
+
+        if (!var_type.equals(new ReferenceType(expr_type)))
+            throw new InvalidTypeException("NEW stmt: right hand side and left hand side have different types!");
+
+        return typeEnv;
     }
 
     @Override

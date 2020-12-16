@@ -1,6 +1,6 @@
 package Model.Exceptions;
 
-public class ADTException extends java.lang.Exception{
+public class ADTException extends MyException{
     public ADTException(String message) {
         super(message);
     }

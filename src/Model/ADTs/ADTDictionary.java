@@ -1,6 +1,7 @@
 package Model.ADTs;
 
 import Model.Exceptions.DictionaryException;
+import Model.Exceptions.MyException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,7 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     }
 
     @Override
-    public void add(TKey key, TValue value) throws DictionaryException {
+    public void add(TKey key, TValue value) throws MyException {
         /*  Adds a (key, value) pair to dictionary
                 Throws: DictionaryException if the pair is already stored in dictionary
                 Return: None
@@ -29,7 +30,7 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     }
 
     @Override
-    public void remove(TKey tKey) throws DictionaryException {
+    public void remove(TKey tKey) throws MyException {
         /*  Removes a <key, value> pair from dictionary
                 Throws: DictionaryException if the pair is not stored in dictionary
                 Return: None
@@ -41,7 +42,7 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     }
 
     @Override
-    public void update(TKey key, TValue updateValue) throws  DictionaryException{
+    public void update(TKey key, TValue updateValue) throws  MyException{
         /*  Updates a (key, value) pair from dictionary
                 Throws: DictionaryException if pair is not stored in dicionary
                 Return: None
@@ -53,7 +54,7 @@ public class ADTDictionary<TKey, TValue> implements ADTDicionaryInterface<TKey, 
     }
 
     @Override
-    public TValue lookup(TKey key) throws DictionaryException{
+    public TValue lookup(TKey key) throws MyException{
         /*  Checks if a pair exists in dicionary
                 Throws: DictionaryException if the pair is not stored in dictionary
                 Return: The Value that is found at the given Key in dicionary

@@ -1,10 +1,7 @@
 package Model;
 
 import Model.ADTs.*;
-import Model.Exceptions.DictionaryException;
-import Model.Exceptions.EvaluationException;
-import Model.Exceptions.StackException;
-import Model.Exceptions.StatementException;
+import Model.Exceptions.*;
 import Model.Statements.StatementInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
@@ -110,7 +107,7 @@ public class ProgramState {
         return heap;
     }
 
-    public ProgramState oneStep() throws StackException, StatementException, DictionaryException, EvaluationException {
+    public ProgramState oneStep() throws MyException {
         if (executionStack.isEmpty())
             throw new StackException("Execution stack is empty");
 
