@@ -1,0 +1,29 @@
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #cccdcf;
+    -fx-text-fill: white;
+}
+
+.list-cell:hover{
+    -fx-background-color: #EDF2F4;
+}
+
+.list-view .list-cell:even {
+    -fx-text-fill: #2B2D42;
+    -fx-font-size: 20px;
+}
+.list-view .list-cell:odd {
+    -fx-text-fill: #2B2D42;
+    -fx-font-size: 20px;
+}
+
+.list-cell{
+    -fx-padding: 20 20 20 40;
+    -fx-background-insets: 0;
+
+}
+
+.list-view, .split-pane { -fx-background-insets: 0; -fx-padding: 0; }
+
+
+
+
