@@ -24,6 +24,12 @@ public class Controller {
     StringBuilder allSteptsStringRepresentation;
     ExecutorService executor;
 
+    public Controller(RepositoryInterface repository) {
+        //  Constructor of the controller
+        this.repository = repository;
+        this.allSteptsStringRepresentation = new StringBuilder();
+    }
+
     public void SetRepositoryFile(String filePath){
         //  Setter for the log file stored in repository
         repository.setLogFilePath(filePath);
@@ -34,10 +40,8 @@ public class Controller {
         return repository.getLogFilePath();
     }
 
-    public Controller(RepositoryInterface repository) {
-        //  Constructor of the controller
-        this.repository = repository;
-        this.allSteptsStringRepresentation = new StringBuilder();
+    public RepositoryInterface getRepository() {
+        return repository;
     }
 
     public void addProgram(ProgramState programState){
@@ -82,7 +86,7 @@ public class Controller {
 //    }
 
 
-    void singleStepForAllPrograms(List<ProgramState> programs) throws InterruptedException, MyException {
+    public void singleStepForAllPrograms(List<ProgramState> programs) throws InterruptedException, MyException {
         /*  Executes a single step for all the
                 Steps:  -   Log the programs to a log file
                         -   get the list of callables
@@ -158,7 +162,7 @@ public class Controller {
 
     public void allStepsExecution() throws MyException, InterruptedException {
 
-        executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
         ArrayList<ProgramState> programs = (ArrayList<ProgramState>)removeCompletedPrograms(repository.getProgramStates());
 
 
@@ -218,7 +222,7 @@ public class Controller {
 
     }
 
-    List<ProgramState> removeCompletedPrograms(List<ProgramState> programList){
+    public List<ProgramState> removeCompletedPrograms(List<ProgramState> programList){
         /*  Returns the list of programs that are not completed yet
                 Steps:  -   Filter the not completed programs
                         -   Collect them into a list

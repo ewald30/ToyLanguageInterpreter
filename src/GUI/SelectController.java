@@ -72,41 +72,22 @@ public class SelectController implements Initializable {
         System.out.println(program_list.getSelectionModel().getSelectedIndex());
         int programNumber = program_list.getSelectionModel().getSelectedIndex();                //  Get the selected item's index
         StatementInterface program = programCreator.getProgram_list().get(programNumber);
-
-
-
-        var typeEnv = new ADTDictionary<String, TypeInterface>();
-        var output = new ADTList<ValueInterface>();                                           //  List containing the output
-        var symbolTable = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
-        var fileTable = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
-        var executionStack = new ADTStack<StatementInterface>();                        //  Stack containing all the statements that have to be executed
-        var heap = new ADTHeap<Integer, ValueInterface>();
-        var ProgramState = new ProgramState(executionStack, symbolTable, program, output, fileTable, heap);
-        var repository = new Repository("logFileGUI.txt");
-        var controller = new Controller(repository);
-
-
         try {
+            var typeEnv = new ADTDictionary<String, TypeInterface>();
             typeEnv = (ADTDictionary<String, TypeInterface>) program.TypeCheck(typeEnv);
-            controller.addProgram(ProgramState);
 
-            TextInputDialog dialog = new TextInputDialog("eg. logFile.txt");
-            dialog.setTitle("File Input");
-            dialog.setHeaderText(null);
-            dialog.setContentText("Please enter a file name:");
-            Optional<String> result = dialog.showAndWait();
-            result.ifPresent(controller::SetRepositoryFile);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ExecutionWindow.fxml"));
+            Parent root = (Parent) loader.load();
 
-            Parent root = FXMLLoader.load(getClass().getResource("ExecutionWindow.fxml"));
+            ExecutionWindowController exeController = loader.getController();
+            exeController.setProgram(program);
+
             Stage stage = new Stage();
             Scene scene = new Scene(root);
             stage.setTitle("asdasd");
             stage.setScene(scene);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
-
-            controller.allStepsExecution();
-            run_button.setDisable(true);
 
         }
         catch (Exception e){

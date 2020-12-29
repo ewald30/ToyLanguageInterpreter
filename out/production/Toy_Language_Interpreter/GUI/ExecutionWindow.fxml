@@ -89,7 +89,7 @@
                                     </VBox>
                                  </children>
                               </GridPane>
-                              <Button mnemonicParsing="false" text="Button" />
+                              <Button fx:id="oneStepButton" mnemonicParsing="false" onAction="#handleOneStep" text="Run One Step" />
                               <TextField />
                            </children>
                         </VBox>
