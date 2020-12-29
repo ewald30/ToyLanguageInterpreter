@@ -12,6 +12,7 @@ import Model.Types.TypeInterface;
 public class CompoundStatement implements StatementInterface{
     StatementInterface statement1;
     StatementInterface statement2;
+    String description;
 
     public CompoundStatement(StatementInterface statement1, StatementInterface statement2){
         //  Creates a new comp statement
@@ -37,6 +38,16 @@ public class CompoundStatement implements StatementInterface{
     public void setStatement2(StatementInterface statement2){
         //  Sets the second statement;
         this.statement2 = statement2;
+    }
+
+    public String getDescription() {
+        //  Returns the description
+        return description;
+    }
+
+    public void setDescription(String description) {
+        //  Sets the description
+        this.description = description;
     }
 
     @Override

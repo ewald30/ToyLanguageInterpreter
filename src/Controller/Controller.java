@@ -1,10 +1,6 @@
 package Controller;
 
-import Model.ADTs.ADTList;
-import Model.ADTs.ADTListInterface;
-import Model.ADTs.ADTStackInterface;
 import Model.Exceptions.*;
-import Model.Statements.StatementInterface;
 import Model.Values.ReferenceValue;
 import Model.Values.ValueInterface;
 import Repository.RepositoryInterface;
@@ -18,6 +14,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 
@@ -84,7 +82,7 @@ public class Controller {
 //    }
 
 
-    void singleStepForAllPrograms(List<ProgramState> programs) throws InterruptedException {
+    void singleStepForAllPrograms(List<ProgramState> programs) throws InterruptedException, MyException {
         /*  Executes a single step for all the
                 Steps:  -   Log the programs to a log file
                         -   get the list of callables
@@ -113,20 +111,30 @@ public class Controller {
                 .collect(Collectors.toList());
 
         //  Execute the programs and update the list
+        AtomicBoolean exceptionThrown = new AtomicBoolean(false);
+        AtomicReference<String> exceptionMessage = new AtomicReference<String>();
+        
         List<ProgramState> programsUpdated = executor.invokeAll(callables).stream()
                 .map(future -> {
                     try {
                         return future.get();
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());;
-                    } catch (ExecutionException e) {
-                        System.out.println(e.getMessage());;
+                    } catch (InterruptedException | ExecutionException e) {
+                        System.out.println(e.getMessage());
+                        exceptionThrown.set(true);
+                        exceptionMessage.set(e.getMessage());
                     }
                     return null;
                 })
                 .filter(p -> p != null)
                 .collect(Collectors.toList());
         programs.addAll(programsUpdated);
+
+
+        if (exceptionThrown.get()){
+            System.out.println(exceptionMessage.get());
+            throw new MyException(exceptionMessage.get());
+        }
+
 
         //  Log the new programs into a file
         programs.forEach(p-> {

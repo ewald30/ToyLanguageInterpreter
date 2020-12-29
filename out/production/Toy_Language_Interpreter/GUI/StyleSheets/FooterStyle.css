@@ -1,0 +1,25 @@
+#bottom_pane{
+    -fx-background-color: #C8C6C6;
+}
+
+#run_button:hover{
+    -fx-text-fill: #5a5a5a;
+}
+
+#run_button:pressed{
+    -fx-text-fill: #999999;
+}
+
+#run_button{
+    -fx-padding: 0 20 0 0;
+    -fx-background-color: #C8C6C6;
+    -fx-text-fill: grey;
+    -fx-font-family: "Futura";
+
+}
+
+#selected_program_label{
+    -fx-text-fill: grey;
+    -fx-padding: 5 0 5 20;
+    -fx-font-family: "Futura";
+}
