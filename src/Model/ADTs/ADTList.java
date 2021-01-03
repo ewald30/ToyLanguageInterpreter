@@ -9,6 +9,9 @@ import java.util.ArrayList;
 public class ADTList<TValue> implements ADTListInterface<TValue> {
     private final ArrayList<TValue> list;
 
+    public ArrayList<TValue> getContent() {
+        return list;
+    }
 
     public ADTList(){
         /*  Creates a new list

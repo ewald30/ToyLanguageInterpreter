@@ -85,7 +85,7 @@ public class ProgramCreator {
 
         var example4 = connectStatements(List.of(
                 new VariableDeclarationStatement("varf", new StringType()),              //  Declare variable to hold the file name
-                new AssignStatement("varf", new ValueExpression(new StringValue("test.in"))),   //  Assign it the file name
+                new AssignStatement("varf", new ValueExpression(new StringValue("test.txt"))),   //  Assign it the file name
                 new OpenRFileStatement(new VariableExpression("varf")),                  //  Open the file
                 new VariableDeclarationStatement("varc", new IntType()),                 //  Declare variable to hold the integers
                 new ReadFileStatement(new VariableExpression("varf"), "varc"),  //  Read the first integer

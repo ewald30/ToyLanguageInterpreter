@@ -1,20 +1,25 @@
 package Model;
 
 import Model.ADTs.*;
+import Model.DesignPattern.MyObserver;
+import Model.DesignPattern.Subject;
 import Model.Exceptions.*;
 import Model.Statements.StatementInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
 
 import java.io.BufferedReader;
+import java.util.ArrayList;
 
-public class ProgramState {
+public class ProgramState implements Subject {
     ADTStackInterface <StatementInterface> executionStack;
     ADTDicionaryInterface <String, ValueInterface> symbolTable;
     StatementInterface originalProgram;
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
     ADTHeapInterface<Integer, ValueInterface> heap;
+
+    ArrayList<MyObserver> observers;
     int ID;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack,
@@ -29,6 +34,7 @@ public class ProgramState {
         this.output = output;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.observers = new ArrayList<MyObserver>();
         }
 
     public String toString(){
@@ -120,5 +126,23 @@ public class ProgramState {
         if (executionStack.isEmpty())
             return false;
         return true;
+    }
+
+
+
+
+    @Override
+    public void register(MyObserver newObserver) {
+        observers.add(newObserver);
+    }
+
+    @Override
+    public void unregister(MyObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers(ArrayList<ProgramState> currentProgramStates) {
+        observers.forEach(o -> o.update(currentProgramStates));
     }
 }

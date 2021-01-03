@@ -1,7 +1,12 @@
 package Model.DesignPattern;
 
+
+import Model.ProgramState;
+
+import java.util.ArrayList;
+
 public interface Subject {
-    public void register(Observer newObserver);
-    public void unregister(Observer observer);
-    public void notifyObservers();
+    public void register(MyObserver newObserver);
+    public void unregister(MyObserver observer);
+    public void notifyObservers(ArrayList<ProgramState> currentProgramStates);
 }
