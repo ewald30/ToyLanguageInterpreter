@@ -1,6 +1,8 @@
 package GUI;
 
 import Controller.Controller;
+import GUI.WrapperClasses.ReferenceWrapper;
+import GUI.WrapperClasses.VariableWrapper;
 import Model.ADTs.ADTDictionary;
 import Model.ADTs.ADTHeap;
 import Model.ADTs.ADTList;
@@ -12,13 +14,12 @@ import Model.Types.TypeInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
 import Repository.Repository;
-import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import Model.DesignPattern.MyObserver;
 
@@ -35,16 +36,21 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public AnchorPane panel1;
     public Button oneStepButton;
     public ListView ProgramIDsListView;
-    public TableView SymbolTableGUI;
-    public TableColumn VarNameColumnGUI;
-    public TableColumn ValueColumnGUI;
     public ListView OutputGUI;
     public ListView ExeStackGUI;
     public ListView FIleTableGUI;
-    public TableView HeapTableGUI;
-    public TableColumn HeapAddrGUI;
-    public TableColumn HeapValueGUI;
 
+    //  Symbol table
+    public TableView<VariableWrapper> SymbolTableGUI;
+    public TableColumn<VariableWrapper, String> VarNameColumnGUI;
+    public TableColumn<VariableWrapper, String> ValueColumnGUI;
+    ObservableList<VariableWrapper> variableList = FXCollections.observableArrayList();
+
+    //  Heap table
+    public TableView<ReferenceWrapper> HeapTableGUI;
+    public TableColumn<ReferenceWrapper, String> HeapAddrGUI;
+    public TableColumn<ReferenceWrapper, String> HeapValueGUI;
+    ObservableList<ReferenceWrapper> referenceList = FXCollections.observableArrayList();
 
     StatementInterface program;
     ADTDictionary<String, TypeInterface> typeEnv;
@@ -65,9 +71,48 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
     }
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        typeEnv = new ADTDictionary<String, TypeInterface>();
+        output = new ADTList<ValueInterface>();                                           //  List containing the output
+        symbolTable = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
+        fileTable = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
+        executionStack = new ADTStack<StatementInterface>();                        //  Stack containing all the statements that have to be executed
+        heap = new ADTHeap<Integer, ValueInterface>();
+        repository = new Repository("logFileGUI.txt");
+        controller = new Controller(repository);
+
+        //  Setting the executor for the controller
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        controller.setExecutor(executor);
+
+        //  Dialog used for writing the file name
+        TextInputDialog dialog = new TextInputDialog("eg. logFile.txt");
+        dialog.setTitle("File Input");
+        dialog.setHeaderText(null);
+        dialog.setContentText("Please enter a file name:");
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(controller::SetRepositoryFile);
+
+
+        //  Symbol table
+        VarNameColumnGUI.setCellValueFactory(new PropertyValueFactory<VariableWrapper, String>("Name"));
+        ValueColumnGUI.setCellValueFactory(new PropertyValueFactory<VariableWrapper, String>("Value"));
+        SymbolTableGUI.setItems(variableList);
+
+        //  Heap table
+        HeapAddrGUI.setCellValueFactory(new PropertyValueFactory<ReferenceWrapper, String>("Address"));
+        HeapValueGUI.setCellValueFactory(new PropertyValueFactory<ReferenceWrapper, String>("Value"));
+        HeapTableGUI.setItems(referenceList);
+
+
+    }
+
+
+
     @Override
     public void update(ArrayList<ProgramState> currentProgramStates) {
-        System.out.println("HOPAAAAA ceva s-a intamplat");
         System.out.println(currentProgramStates.get(0).getFileTable().toString());
 
         //      Update the execution stack list
@@ -91,50 +136,24 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
 
 
-
         //      Update the symbol table
         var symTable = currentProgramStates.get(0).getSymbolTable().getContent();
+        SymbolTableGUI.getItems().clear();
+        symTable.keySet().stream()
+                .forEach(p -> variableList.add(new VariableWrapper(p, symTable.get(p).toString())));
+        SymbolTableGUI.setItems(variableList);
 
-        ObservableList<String> values = FXCollections.observableArrayList(symTable.values().toString());
-        ObservableList<String> keys = FXCollections.observableArrayList(symTable.keySet());
-        ObservableList<String> data = FXCollections.observableArrayList(values);
-        data.addAll(keys);
-        SymbolTableGUI.setItems(data);
-//        for(String key :symTable.keySet()){
-//            SymbolTableGUI,
-//
-//        }
+
+
+        //      Update the heap table
+        var heapTable = currentProgramStates.get(0).getHeap().getContent();
+        HeapTableGUI.getItems().clear();
+        heapTable.keySet().stream()
+                .forEach(r -> referenceList.add(new ReferenceWrapper(r.toString(),heapTable.get(r).toString())));
+        HeapTableGUI.setItems(referenceList);
+
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        typeEnv = new ADTDictionary<String, TypeInterface>();
-        output = new ADTList<ValueInterface>();                                           //  List containing the output
-        symbolTable = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
-        fileTable = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
-        executionStack = new ADTStack<StatementInterface>();                        //  Stack containing all the statements that have to be executed
-        heap = new ADTHeap<Integer, ValueInterface>();
-        repository = new Repository("logFileGUI.txt");
-        controller = new Controller(repository);
-
-        ExecutorService executor = Executors.newFixedThreadPool(2);
-        controller.setExecutor(executor);
-
-        TextInputDialog dialog = new TextInputDialog("eg. logFile.txt");
-        dialog.setTitle("File Input");
-        dialog.setHeaderText(null);
-        dialog.setContentText("Please enter a file name:");
-        Optional<String> result = dialog.showAndWait();
-        result.ifPresent(controller::SetRepositoryFile);
-
-
-        TableColumn<String, String> tableColumn = new TableColumn<>("VarName");
-        TableColumn<String, String> tableColumn2 = new TableColumn<>("Value");
-        tableColumn.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue()));
-        tableColumn2.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue()));
-        SymbolTableGUI.getColumns().add(tableColumn);
-        SymbolTableGUI.getColumns().add(tableColumn2);
-    }
 
 
     public void handleOneStep(ActionEvent event) throws InterruptedException, MyException {
