@@ -33,9 +33,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ExecutionWindowController implements Initializable, MyObserver {
+
+    //  GUI items
     public AnchorPane panel1;
     public Button oneStepButton;
-    public ListView ProgramIDsListView;
     public ListView OutputGUI;
     public ListView ExeStackGUI;
     public ListView FIleTableGUI;
@@ -52,6 +53,8 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public TableColumn<ReferenceWrapper, String> HeapValueGUI;
     ObservableList<ReferenceWrapper> referenceList = FXCollections.observableArrayList();
 
+
+    //  Those are used for executing the program
     StatementInterface program;
     ADTDictionary<String, TypeInterface> typeEnv;
     ADTList<ValueInterface> output;
@@ -63,12 +66,14 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     private Repository repository;
     private Controller controller;
 
+
+
     public void setProgram(StatementInterface program) {
+        //  Sets the program that will be executed
         this.program = program;
         programState = new ProgramState(executionStack, symbolTable, program, output, fileTable, heap);
         programState.register(this);
         controller.addProgram(programState);
-
     }
 
 
@@ -109,49 +114,55 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
     }
 
-
-
     @Override
     public void update(ArrayList<ProgramState> currentProgramStates) {
-        System.out.println(currentProgramStates.get(0).getFileTable().toString());
+        //  Will update with the given program states the GUI
+        System.out.println(currentProgramStates.get(0).toString());
+        updateExeListGUI(currentProgramStates);
+        updateFileTableListGUI(currentProgramStates);
+        updateOutputListGUI(currentProgramStates);
+        updateSymbolTableGUI(currentProgramStates);
+        updateHeapTableGUI(currentProgramStates);
 
+    }
+
+    private void updateExeListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the execution stack list
         ExeStackGUI.getItems().clear();
         Arrays.stream(currentProgramStates.get(0).getExecutionStack().getContent().toArray())
                 .forEach(p -> ExeStackGUI.getItems().add(p.toString()));
+    }
 
-
+    private void updateFileTableListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the file table list
         FIleTableGUI.getItems().clear();
         currentProgramStates.get(0).getFileTable().getContent().keySet().stream()
                 .forEach(f -> FIleTableGUI.getItems().add(f));
+    }
 
-
-
+    private void updateOutputListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the output list
         OutputGUI.getItems().clear();
         currentProgramStates.get(0).getOutput().getContent().stream()
                 .forEach(o -> OutputGUI.getItems().add(o.toString()));
+    }
 
-
-
-
+    private void updateSymbolTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the symbol table
         var symTable = currentProgramStates.get(0).getSymbolTable().getContent();
         SymbolTableGUI.getItems().clear();
         symTable.keySet().stream()
                 .forEach(p -> variableList.add(new VariableWrapper(p, symTable.get(p).toString())));
         SymbolTableGUI.setItems(variableList);
+    }
 
-
-
+    private void updateHeapTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the heap table
         var heapTable = currentProgramStates.get(0).getHeap().getContent();
         HeapTableGUI.getItems().clear();
         heapTable.keySet().stream()
                 .forEach(r -> referenceList.add(new ReferenceWrapper(r.toString(),heapTable.get(r).toString())));
         HeapTableGUI.setItems(referenceList);
-
     }
 
 
@@ -164,14 +175,12 @@ public class ExecutionWindowController implements Initializable, MyObserver {
                 controller.singleStepForAllPrograms(programs);
 
                 ArrayList<ProgramState> finalPrograms = programs;
-                programs.forEach(p -> p.notifyObservers(finalPrograms));
                 programs = (ArrayList<ProgramState>)controller.removeCompletedPrograms(programs);
             }
             else {
                 controller.getExecutor().shutdownNow();
                 controller.getRepository().setProgramStates(programs);
             }
-//          controller.allStepsExecution();
 
         } catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -179,7 +188,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
             alert.setHeaderText(null);
             alert.setContentText(e.getMessage());
             alert.showAndWait();
-            System.out.println("asdahbghjgjhgjhkjkghkjhghjkghkgjhkgjhjgksd" + e.getMessage());
+            System.out.println(e.getMessage());
         }
 
     }

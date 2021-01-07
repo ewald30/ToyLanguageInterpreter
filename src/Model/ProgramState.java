@@ -129,20 +129,22 @@ public class ProgramState implements Subject {
     }
 
 
-
-
+    //          Used for design pattern
     @Override
     public void register(MyObserver newObserver) {
+        //  Registers a new observer
         observers.add(newObserver);
     }
 
     @Override
     public void unregister(MyObserver observer) {
+        //  Deletes an observer
         observers.remove(observer);
     }
 
     @Override
     public void notifyObservers(ArrayList<ProgramState> currentProgramStates) {
+        //  Notifies all observer one by one
         observers.forEach(o -> o.update(currentProgramStates));
     }
 }

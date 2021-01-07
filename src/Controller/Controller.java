@@ -165,6 +165,8 @@ public class Controller {
 
         //  Update the repository too
         repository.setProgramStates((ArrayList<ProgramState>)programs);
+        programs.forEach(p -> p.notifyObservers((ArrayList<ProgramState>) programs));
+
 
     }
 
