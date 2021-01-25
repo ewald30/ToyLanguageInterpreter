@@ -158,6 +158,22 @@ public class ProgramCreator {
         program_description_list.add("8. Contains a fork statement and prints some values in two different threads");
 
 
+
+
+        var example9 = connectStatements(List.of(
+                new VariableDeclarationStatement("v", new IntType()),
+                new AssignStatement("v", new ValueExpression(new IntValue(0))),
+                new RepeatUntilStatement(connectStatements(List.of(
+                        new PrintStatement(new VariableExpression("v")),
+                        new AssignStatement("v",    // v=
+                                new ArithmeticExpression(   // v+1
+                                        new VariableExpression("v"), new ValueExpression(new IntValue(1)),'+')))),
+                        new RelationalExpression(new VariableExpression("v"), new ValueExpression(new IntValue(3)), "==")),
+                new PrintStatement(new ArithmeticExpression(new VariableExpression("v"), new ValueExpression(new IntValue(10)), '*'))
+        ));
+        program_description_list.add("9. Contains a repeat until loop");
+
+
         program_list.add(example1);
         program_list.add(example2);
         program_list.add(example3);
@@ -166,6 +182,7 @@ public class ProgramCreator {
         program_list.add(example6);
         program_list.add(example7);
         program_list.add(example8);
+        program_list.add(example9);
 
     }
 }

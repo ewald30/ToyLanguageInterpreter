@@ -29,6 +29,11 @@ public class WhileStatement implements StatementInterface{
                 Return: -   The state of the program after executing a
 
         */
+//        System.out.println("Execution stack: " + state.getExecutionStack().toString());
+//        System.out.println("this: " +this);
+//        System.out.println("expression:" + expression.toString());
+//        System.out.println("then: " + statement.toString());
+
         var symbolTable = state.getSymbolTable();
         var executionStack = state.getExecutionStack();
         var heap = state.getHeap();
@@ -39,7 +44,8 @@ public class WhileStatement implements StatementInterface{
             throw new InvalidTypeException("Condition should return a boolean value!");
 
         var expressionValue = (BoolValue) expressionEvaluated;
-        if (expressionValue.getValue() == true){
+        
+        if (expressionValue.getValue()){
             executionStack.push(this);
             executionStack.push(statement);
         }

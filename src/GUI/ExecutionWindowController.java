@@ -117,7 +117,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     @Override
     public void update(ArrayList<ProgramState> currentProgramStates) {
         //  Will update with the given program states the GUI
-        System.out.println(currentProgramStates.get(0).toString());
+        //System.out.println(currentProgramStates.get(0).toString());
         updateExeListGUI(currentProgramStates);
         updateFileTableListGUI(currentProgramStates);
         updateOutputListGUI(currentProgramStates);

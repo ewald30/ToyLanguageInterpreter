@@ -58,6 +58,13 @@ public class RelationalExpression implements ExpressionInterface{
 
     @Override
     public ValueInterface evaluate(ADTDicionaryInterface<String, ValueInterface> symbolTable, ADTDicionaryInterface<Integer, ValueInterface> heap) throws MyException {
+        /*  Evaluates a relational expression
+                Steps:  -   Evaluate the first part of expression (expression1)
+                        -   Evaluate the second part of expression (expression2)
+                        -   If both are evaluated to int type, perform the operation given by the relation variable and return the result
+                Throws: -   EvaluationException if the type of expressions are not int
+                Return: -   A new Bool value given by performing the given operation on the two expressions
+        */
         var valueExpression1 = this.expression1.evaluate(symbolTable, heap);
         var valueExpression2 = this.expression2.evaluate(symbolTable, heap);
 
@@ -112,7 +119,8 @@ public class RelationalExpression implements ExpressionInterface{
 
     @Override
     public ExpressionInterface deepCopy() {
-        return null;
+        //  Returns a deep copy of the relational expression
+        return new RelationalExpression(expression1.deepCopy(), expression2.deepCopy(), relation);
     }
 
     @Override
