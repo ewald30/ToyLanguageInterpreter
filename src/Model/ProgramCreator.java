@@ -174,6 +174,24 @@ public class ProgramCreator {
         program_description_list.add("9. Contains a repeat until loop");
 
 
+
+
+        var example10 = connectStatements(List.of(
+                new VariableDeclarationStatement("b", new BoolType()),
+                new VariableDeclarationStatement("c", new IntType()),
+                new AssignStatement("b", new ValueExpression(new BoolValue(true))),
+                new ConditionalAssignmentStatement("c",new VariableExpression("b"),
+                        new ValueExpression(new IntValue(100)),
+                        new ValueExpression(new IntValue(200))),
+                new PrintStatement(new VariableExpression("c")),
+                new ConditionalAssignmentStatement("c",new ValueExpression(new BoolValue(false)),
+                        new ValueExpression(new IntValue(100)),
+                        new ValueExpression(new IntValue(200))),
+                new PrintStatement(new VariableExpression("c"))
+        ));
+        program_description_list.add("10. Contains a conditional assignment statement");
+
+
         program_list.add(example1);
         program_list.add(example2);
         program_list.add(example3);
@@ -183,6 +201,7 @@ public class ProgramCreator {
         program_list.add(example7);
         program_list.add(example8);
         program_list.add(example9);
+        program_list.add(example10);
 
     }
 }

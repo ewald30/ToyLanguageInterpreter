@@ -340,6 +340,41 @@ public class Interpreter {
         }
 
 
+
+
+
+        var example10 = connectStatements(List.of(
+                new VariableDeclarationStatement("b", new BoolType()),
+                new VariableDeclarationStatement("c", new IntType()),
+                new AssignStatement("b", new ValueExpression(new BoolValue(true))),
+                new ConditionalAssignmentStatement("c",new VariableExpression("b"),
+                        new ValueExpression(new IntValue(100)),
+                        new ValueExpression(new IntValue(200))),
+                new PrintStatement(new VariableExpression("c")),
+                new ConditionalAssignmentStatement("c",new ValueExpression(new BoolValue(false)),
+                        new ValueExpression(new IntValue(100)),
+                        new ValueExpression(new IntValue(200))),
+                new PrintStatement(new VariableExpression("c"))
+        ));
+        var typeEnv10 = new ADTDictionary<String, TypeInterface>();
+        try{
+            typeEnv10 = (ADTDictionary<String, TypeInterface>)example10.TypeCheck(typeEnv10);
+            var output10 = new ADTList<ValueInterface>();                                           //  List containing the output
+            var symbolTable10 = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
+            var fileTable10 = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
+            var executionStack10 = new ADTStack <StatementInterface>();                        //  Stack containing all the statements that have to be executed
+            var heap10 = new ADTHeap<Integer, ValueInterface>();
+            var ProgramState10 = new ProgramState(executionStack10, symbolTable10, example10, output10, fileTable10, heap10);
+            var repository10 = new Repository("logfile10.txt");
+            var controller10 = new Controller(repository10);
+            controller10.addProgram(ProgramState10);
+            textMenu.addCommand(new RunExampleCommand("10", example10.toString(), controller10));
+        } catch (MyException e){
+            System.out.println(e.getMessage());
+
+        }
+
+
         textMenu.show();
 
 
