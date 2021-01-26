@@ -230,6 +230,23 @@ public class ProgramCreator {
         program_description_list.add("12. Contains a switch statement");
 
 
+
+
+
+        var example13 = connectStatements(List.of(
+                new VariableDeclarationStatement("v", new IntType()),
+                new AssignStatement("v", new ValueExpression(new IntValue(10))),
+                new ForkStatement(connectStatements(List.of(
+                        new AssignStatement("v", new ArithmeticExpression(new VariableExpression("v"),new ValueExpression(new IntValue(1)),'-')),
+                        new AssignStatement("v", new ArithmeticExpression(new VariableExpression("v"),new ValueExpression(new IntValue(1)),'-')),
+                        new PrintStatement(new VariableExpression("v"))
+                ))),
+                new SleepStatement(10),
+                new PrintStatement(new ArithmeticExpression(new VariableExpression("v"), new ValueExpression(new IntValue(10)), '*'))
+        ));
+        program_description_list.add("13. Contains a sleep statement");
+
+
         program_list.add(example1);
         program_list.add(example2);
         program_list.add(example3);
@@ -242,6 +259,7 @@ public class ProgramCreator {
         program_list.add(example10);
         program_list.add(example11);
         program_list.add(example12);
+        program_list.add(example13);
 
     }
 }
