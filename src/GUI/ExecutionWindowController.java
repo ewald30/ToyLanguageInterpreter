@@ -79,8 +79,9 @@ public class ExecutionWindowController implements Initializable, MyObserver {
         //  Sets the program that will be executed
         this.program = program;
         programState = new ProgramState(executionStack, symbolTable, program, output, fileTable, heap);
-        programState.register(this);
+        controller.register(this);
         controller.addProgram(programState);
+        ExeStackGUI.getItems().add(program.toString());
     }
 
 
@@ -117,8 +118,6 @@ public class ExecutionWindowController implements Initializable, MyObserver {
         HeapAddrGUI.setCellValueFactory(new PropertyValueFactory<ReferenceWrapper, String>("Address"));
         HeapValueGUI.setCellValueFactory(new PropertyValueFactory<ReferenceWrapper, String>("Value"));
         HeapTableGUI.setItems(referenceList);
-
-
     }
 
     @Override
@@ -159,6 +158,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
                 .filter(p -> p.getId() == program_id)
                 .findAny()
                 .orElse(null);
+
        ExeStackGUI.getItems().clear();
         Arrays.stream(state.getExecutionStack().getContent().toArray())
                 .forEach(p -> ExeStackGUI.getItems().add(p.toString()));
@@ -167,27 +167,35 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
     private void updateFileTableListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the file table list
-        if (program_id>currentProgramStates.size())
-            return;
+        ProgramState state = currentProgramStates.stream()
+                .filter(p -> p.getId() == program_id)
+                .findAny()
+                .orElse(null);
+
         FIleTableGUI.getItems().clear();
-        currentProgramStates.get(program_id).getFileTable().getContent().keySet().stream()
+        state.getFileTable().getContent().keySet().stream()
                 .forEach(f -> FIleTableGUI.getItems().add(f));
     }
 
     private void updateOutputListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the output list
-        if (program_id>currentProgramStates.size())
-            return;
+        ProgramState state = currentProgramStates.stream()
+                .filter(p -> p.getId() == program_id)
+                .findAny()
+                .orElse(null);
+
         OutputGUI.getItems().clear();
-        currentProgramStates.get(program_id).getOutput().getContent().stream()
+        state.getOutput().getContent().stream()
                 .forEach(o -> OutputGUI.getItems().add(o.toString()));
     }
 
     private void updateSymbolTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the symbol table
-        if (program_id>currentProgramStates.size())
-            return;
-        var symTable = currentProgramStates.get(program_id).getSymbolTable().getContent();
+        ProgramState state = currentProgramStates.stream()
+                .filter(p -> p.getId() == program_id)
+                .findAny()
+                .orElse(null);
+        var symTable = state.getSymbolTable().getContent();
         SymbolTableGUI.getItems().clear();
         symTable.keySet().stream()
                 .forEach(p -> variableList.add(new VariableWrapper(p, symTable.get(p).toString())));
@@ -196,9 +204,11 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
     private void updateHeapTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the heap table
-        if (program_id>currentProgramStates.size())
-            return;
-        var heapTable = currentProgramStates.get(program_id).getHeap().getContent();
+        ProgramState state = currentProgramStates.stream()
+                .filter(p -> p.getId() == program_id)
+                .findAny()
+                .orElse(null);
+        var heapTable = state.getHeap().getContent();
         HeapTableGUI.getItems().clear();
         heapTable.keySet().stream()
                 .forEach(r -> referenceList.add(new ReferenceWrapper(r.toString(),heapTable.get(r).toString())));

@@ -11,15 +11,13 @@ import Model.Values.ValueInterface;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 
-public class ProgramState implements Subject {
+public class ProgramState{
     ADTStackInterface <StatementInterface> executionStack;
     ADTDicionaryInterface <String, ValueInterface> symbolTable;
     StatementInterface originalProgram;
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
     ADTHeapInterface<Integer, ValueInterface> heap;
-
-    ArrayList<MyObserver> observers;
     int ID;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack,
@@ -34,7 +32,6 @@ public class ProgramState implements Subject {
         this.output = output;
         this.fileTable = fileTable;
         this.heap = heap;
-        this.observers = new ArrayList<MyObserver>();
         }
 
     public String toString(){
@@ -128,23 +125,4 @@ public class ProgramState implements Subject {
         return true;
     }
 
-
-    //          Used for design pattern
-    @Override
-    public void register(MyObserver newObserver) {
-        //  Registers a new observer
-        observers.add(newObserver);
-    }
-
-    @Override
-    public void unregister(MyObserver observer) {
-        //  Deletes an observer
-        observers.remove(observer);
-    }
-
-    @Override
-    public void notifyObservers(ArrayList<ProgramState> currentProgramStates) {
-        //  Notifies all observer one by one
-        observers.forEach(o -> o.update(currentProgramStates));
-    }
 }

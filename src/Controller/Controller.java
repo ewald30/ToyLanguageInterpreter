@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.DesignPattern.MyObserver;
+import Model.DesignPattern.Subject;
 import Model.Exceptions.*;
 import Model.Values.ReferenceValue;
 import Model.Values.ValueInterface;
@@ -19,10 +21,13 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 
-public class Controller {
+public class Controller implements Subject {
     RepositoryInterface repository;
     StringBuilder allSteptsStringRepresentation;
     ExecutorService executor;
+
+    ArrayList<MyObserver> observers = new ArrayList<>();
+
 
     public Controller(RepositoryInterface repository) {
         //  Constructor of the controller
@@ -165,7 +170,7 @@ public class Controller {
 
         //  Update the repository too
         repository.setProgramStates((ArrayList<ProgramState>)programs);
-        programs.forEach(p -> p.notifyObservers((ArrayList<ProgramState>) programs));
+        programs.forEach(p -> this.notifyObservers((ArrayList<ProgramState>) programs));
 
 
     }
@@ -245,5 +250,25 @@ public class Controller {
                 .collect(Collectors.toList());
 
 
+    }
+
+
+    //          Used for design pattern
+    @Override
+    public void register(MyObserver newObserver) {
+        //  Registers a new observer
+        observers.add(newObserver);
+    }
+
+    @Override
+    public void unregister(MyObserver observer) {
+        //  Deletes an observer
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers(ArrayList<ProgramState> currentProgramStates) {
+        //  Notifies all observer one by one
+        observers.forEach(o -> o.update(currentProgramStates));
     }
 }
