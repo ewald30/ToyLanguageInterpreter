@@ -375,6 +375,78 @@ public class Interpreter {
         }
 
 
+
+
+
+        var example11 = connectStatements(List.of(
+                new VariableDeclarationStatement("v", new IntType()),
+                new ForLoopStatement("v",
+                        new ValueExpression(new IntValue(3)),
+                        new RelationalExpression(new VariableExpression("v"), new ValueExpression(new IntValue(0)),">"),
+                        new ArithmeticExpression(new VariableExpression("v"), new ValueExpression(new IntValue(1)), '-'),
+                        new CompoundStatement(
+                                new PrintStatement(new VariableExpression("v")),
+                                new PrintStatement(new ValueExpression(new StringValue("asd")))))
+        ));
+        var typeEnv11 = new ADTDictionary<String, TypeInterface>();
+        try{
+            typeEnv11 = (ADTDictionary<String, TypeInterface>)example11.TypeCheck(typeEnv11);
+            var output11 = new ADTList<ValueInterface>();                                           //  List containing the output
+            var symbolTable11 = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
+            var fileTable11 = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
+            var executionStack11 = new ADTStack <StatementInterface>();                        //  Stack containing all the statements that have to be executed
+            var heap11 = new ADTHeap<Integer, ValueInterface>();
+            var ProgramState11 = new ProgramState(executionStack11, symbolTable11, example11, output11, fileTable11, heap11);
+            var repository11 = new Repository("logfile11.txt");
+            var controller11 = new Controller(repository11);
+            controller11.addProgram(ProgramState11);
+            textMenu.addCommand(new RunExampleCommand("11", example10.toString(), controller11));
+        } catch (MyException e){
+            System.out.println(e.getMessage());
+
+        }
+
+
+
+
+
+
+
+
+        var example12 = connectStatements(List.of(
+                new VariableDeclarationStatement("a", new IntType()),
+                new VariableDeclarationStatement("b", new IntType()),
+                new VariableDeclarationStatement("c", new IntType()),
+                new AssignStatement("a", new ValueExpression(new IntValue(1))),
+                new AssignStatement("b", new ValueExpression(new IntValue(2))),
+                new AssignStatement("c", new ValueExpression(new IntValue(5))),
+                new SwitchStatement(new ArithmeticExpression(new VariableExpression("a"), new ValueExpression(new IntValue(10)),'*'),
+                        new ArithmeticExpression(new VariableExpression("b"), new VariableExpression("c"), '*'),    // case1
+                        new CompoundStatement(new PrintStatement(new VariableExpression("a")), new PrintStatement(new VariableExpression("b"))),    // stmt1
+                        new ValueExpression(new IntValue(10)),  // case 2
+                        new CompoundStatement(new PrintStatement(new ValueExpression(new IntValue(100))), new PrintStatement(new ValueExpression(new IntValue(200)))),  // stmt2
+                        new PrintStatement(new ValueExpression(new IntValue(300)))), // default
+                new PrintStatement(new ValueExpression(new IntValue(300)))
+        ));
+        var typeEnv12 = new ADTDictionary<String, TypeInterface>();
+        try{
+            typeEnv12 = (ADTDictionary<String, TypeInterface>)example12.TypeCheck(typeEnv12);
+            var output12 = new ADTList<ValueInterface>();                                           //  List containing the output
+            var symbolTable12 = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
+            var fileTable12 = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
+            var executionStack12 = new ADTStack <StatementInterface>();                        //  Stack containing all the statements that have to be executed
+            var heap12 = new ADTHeap<Integer, ValueInterface>();
+            var ProgramState12 = new ProgramState(executionStack12, symbolTable12, example12, output12, fileTable12, heap12);
+            var repository12 = new Repository("logfile12.txt");
+            var controller12 = new Controller(repository12);
+            controller12.addProgram(ProgramState12);
+            textMenu.addCommand(new RunExampleCommand("12", example12.toString(), controller12));
+        } catch (MyException e){
+            System.out.println(e.getMessage());
+
+        }
+
+
         textMenu.show();
 
 

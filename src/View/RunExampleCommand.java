@@ -3,6 +3,8 @@ package View;
 import Controller.Controller;
 import Model.Exceptions.*;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class RunExampleCommand extends Command{
     private Controller controller;
@@ -27,6 +29,8 @@ public class RunExampleCommand extends Command{
             if (!logFilePath.equals("")) {
                 controller.SetRepositoryFile(logFilePath);
             }
+            ExecutorService executor = Executors.newFixedThreadPool(2);
+            controller.setExecutor(executor);
             controller.allStepsExecution();
         } catch (Exception exception) {
             System.out.println(exception.getMessage());

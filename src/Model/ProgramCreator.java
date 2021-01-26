@@ -192,6 +192,44 @@ public class ProgramCreator {
         program_description_list.add("10. Contains a conditional assignment statement");
 
 
+
+
+
+
+        var example11 = connectStatements(List.of(
+                new VariableDeclarationStatement("v", new IntType()),
+                new ForLoopStatement("v",
+                        new ValueExpression(new IntValue(3)),
+                        new RelationalExpression(new VariableExpression("v"), new ValueExpression(new IntValue(0)),">"),
+                        new ArithmeticExpression(new VariableExpression("v"), new ValueExpression(new IntValue(1)), '-'),
+                        new CompoundStatement(
+                                new PrintStatement(new VariableExpression("v")),
+                                new PrintStatement(new ValueExpression(new StringValue("asd")))))
+        ));
+        program_description_list.add("11. Contains a for loop statement");
+
+
+
+
+
+        var example12 = connectStatements(List.of(
+                new VariableDeclarationStatement("a", new IntType()),
+                new VariableDeclarationStatement("b", new IntType()),
+                new VariableDeclarationStatement("c", new IntType()),
+                new AssignStatement("a", new ValueExpression(new IntValue(1))),
+                new AssignStatement("b", new ValueExpression(new IntValue(2))),
+                new AssignStatement("c", new ValueExpression(new IntValue(5))),
+                new SwitchStatement(new ArithmeticExpression(new VariableExpression("a"), new ValueExpression(new IntValue(10)),'*'),
+                        new ArithmeticExpression(new VariableExpression("b"), new VariableExpression("c"), '*'),    // case1
+                            new CompoundStatement(new PrintStatement(new VariableExpression("a")), new PrintStatement(new VariableExpression("b"))),    // stmt1
+                        new ValueExpression(new IntValue(10)),  // case 2
+                            new CompoundStatement(new PrintStatement(new ValueExpression(new IntValue(100))), new PrintStatement(new ValueExpression(new IntValue(200)))),  // stmt2
+                        new PrintStatement(new ValueExpression(new IntValue(300)))), // default
+                new PrintStatement(new ValueExpression(new IntValue(300)))
+        ));
+        program_description_list.add("12. Contains a switch statement");
+
+
         program_list.add(example1);
         program_list.add(example2);
         program_list.add(example3);
@@ -202,6 +240,8 @@ public class ProgramCreator {
         program_list.add(example8);
         program_list.add(example9);
         program_list.add(example10);
+        program_list.add(example11);
+        program_list.add(example12);
 
     }
 }

@@ -64,6 +64,12 @@ public class ConditionalAssignmentStatement implements StatementInterface{
 
     @Override
     public ProgramState execute(ProgramState state) throws MyException {
+        /*  Executes a conditional assignment statement
+                Steps:  -   Check if the variable is defined
+                        -   Create an if statement based on the conditional assignment statement
+                Throws: -   VariableNotDefinedException if the variable is not defined
+                Return: -   NULL
+        */
         var symbol_table = state.getSymbolTable();
         var heap = state.getHeap();
 

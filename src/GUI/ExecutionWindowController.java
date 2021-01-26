@@ -1,8 +1,7 @@
 package GUI;
 
 import Controller.Controller;
-import GUI.WrapperClasses.ReferenceWrapper;
-import GUI.WrapperClasses.VariableWrapper;
+import GUI.WrapperClasses.*;
 import Model.ADTs.ADTDictionary;
 import Model.ADTs.ADTHeap;
 import Model.ADTs.ADTList;
@@ -20,6 +19,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import Model.DesignPattern.MyObserver;
 
@@ -40,6 +40,8 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public ListView OutputGUI;
     public ListView ExeStackGUI;
     public ListView FIleTableGUI;
+    public ListView ProgramIDs;
+    public TextField NumberProgramStates;
 
     //  Symbol table
     public TableView<VariableWrapper> SymbolTableGUI;
@@ -65,6 +67,11 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public ProgramState programState;
     private Repository repository;
     private Controller controller;
+
+
+    //  Used to see individual program states when multithreading
+    int program_id;
+    ArrayList<ProgramState> current_programStates;
 
 
 
@@ -123,33 +130,64 @@ public class ExecutionWindowController implements Initializable, MyObserver {
         updateOutputListGUI(currentProgramStates);
         updateSymbolTableGUI(currentProgramStates);
         updateHeapTableGUI(currentProgramStates);
+        updateProgramStatesGUI(currentProgramStates);
+        updateProgramIDsGUI(currentProgramStates);
 
+    }
+
+    private void updateProgramIDsGUI(ArrayList<ProgramState> currentProgramStates){
+        //  Updates the program states ids list
+        ProgramIDs.getItems().clear();
+        currentProgramStates.stream().forEach(p -> ProgramIDs.getItems().add(p.getId()));
+
+    }
+
+    private void updateProgramStatesGUI(ArrayList<ProgramState> currentProgramStates){
+        //  Update the number of program states
+        NumberProgramStates.clear();
+        NumberProgramStates.setText("Number of program states: " + currentProgramStates.size());
     }
 
     private void updateExeListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the execution stack list
-        ExeStackGUI.getItems().clear();
-        Arrays.stream(currentProgramStates.get(0).getExecutionStack().getContent().toArray())
+
+//        System.out.println("_________________________");
+//        currentProgramStates.stream().forEach(p -> System.out.println(p.getExecutionStack()));
+//        System.out.println("_________________________");
+
+        ProgramState state = currentProgramStates.stream()
+                .filter(p -> p.getId() == program_id)
+                .findAny()
+                .orElse(null);
+       ExeStackGUI.getItems().clear();
+        Arrays.stream(state.getExecutionStack().getContent().toArray())
                 .forEach(p -> ExeStackGUI.getItems().add(p.toString()));
+
     }
 
     private void updateFileTableListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the file table list
+        if (program_id>currentProgramStates.size())
+            return;
         FIleTableGUI.getItems().clear();
-        currentProgramStates.get(0).getFileTable().getContent().keySet().stream()
+        currentProgramStates.get(program_id).getFileTable().getContent().keySet().stream()
                 .forEach(f -> FIleTableGUI.getItems().add(f));
     }
 
     private void updateOutputListGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the output list
+        if (program_id>currentProgramStates.size())
+            return;
         OutputGUI.getItems().clear();
-        currentProgramStates.get(0).getOutput().getContent().stream()
+        currentProgramStates.get(program_id).getOutput().getContent().stream()
                 .forEach(o -> OutputGUI.getItems().add(o.toString()));
     }
 
     private void updateSymbolTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the symbol table
-        var symTable = currentProgramStates.get(0).getSymbolTable().getContent();
+        if (program_id>currentProgramStates.size())
+            return;
+        var symTable = currentProgramStates.get(program_id).getSymbolTable().getContent();
         SymbolTableGUI.getItems().clear();
         symTable.keySet().stream()
                 .forEach(p -> variableList.add(new VariableWrapper(p, symTable.get(p).toString())));
@@ -158,7 +196,9 @@ public class ExecutionWindowController implements Initializable, MyObserver {
 
     private void updateHeapTableGUI(ArrayList<ProgramState> currentProgramStates){
         //      Update the heap table
-        var heapTable = currentProgramStates.get(0).getHeap().getContent();
+        if (program_id>currentProgramStates.size())
+            return;
+        var heapTable = currentProgramStates.get(program_id).getHeap().getContent();
         HeapTableGUI.getItems().clear();
         heapTable.keySet().stream()
                 .forEach(r -> referenceList.add(new ReferenceWrapper(r.toString(),heapTable.get(r).toString())));
@@ -170,6 +210,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public void handleOneStep(ActionEvent event) throws InterruptedException, MyException {
         try{
             ArrayList<ProgramState> programs = (ArrayList<ProgramState>) controller.removeCompletedPrograms(controller.getRepository().getProgramStates());
+            System.out.println(programs.size());
 
             if(programs.size() > 0){
                 controller.singleStepForAllPrograms(programs);
@@ -178,6 +219,11 @@ public class ExecutionWindowController implements Initializable, MyObserver {
                 programs = (ArrayList<ProgramState>)controller.removeCompletedPrograms(programs);
             }
             else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Warning");
+                alert.setHeaderText(null);
+                alert.setContentText("The execution stack is empty!");
+                alert.showAndWait();
                 controller.getExecutor().shutdownNow();
                 controller.getRepository().setProgramStates(programs);
             }
@@ -190,6 +236,15 @@ public class ExecutionWindowController implements Initializable, MyObserver {
             alert.showAndWait();
             System.out.println(e.getMessage());
         }
+
+    }
+
+
+    public void handleSelectedProgramState(MouseEvent inputMethodEvent) {
+        String index_string = ProgramIDs.getSelectionModel().getSelectedItem().toString();
+        program_id = Integer.parseInt(index_string);
+        ArrayList<ProgramState> programs = (ArrayList<ProgramState>) controller.removeCompletedPrograms(controller.getRepository().getProgramStates());
+        update(programs);
 
     }
 }
