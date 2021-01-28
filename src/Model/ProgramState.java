@@ -7,9 +7,11 @@ import Model.Exceptions.*;
 import Model.Statements.StatementInterface;
 import Model.Values.StringValue;
 import Model.Values.ValueInterface;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProgramState{
     ADTStackInterface <StatementInterface> executionStack;
@@ -18,13 +20,17 @@ public class ProgramState{
     ADTListInterface <ValueInterface> output;
     ADTDicionaryInterface <StringValue, BufferedReader> fileTable;
     ADTHeapInterface<Integer, ValueInterface> heap;
+    ADTDictionary<Integer, Pair<Integer, List<Integer>>> semaphoreTable;
+
     int ID;
+    int location;
 
     public ProgramState(ADTStackInterface<StatementInterface> executionStack,
                         ADTDicionaryInterface<String, ValueInterface> symbolTable,
                         StatementInterface originalProgram, ADTListInterface<ValueInterface> output,
                         ADTDicionaryInterface <StringValue, BufferedReader> fileTable,
-                        ADTHeapInterface<Integer, ValueInterface> heap) {
+                        ADTHeapInterface<Integer, ValueInterface> heap,
+                        ADTDictionary<Integer, Pair<Integer, List<Integer>>> semaphoreTable) {
         //  Constructor for the program state
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
@@ -32,7 +38,10 @@ public class ProgramState{
         this.output = output;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.semaphoreTable =semaphoreTable;
         }
+
+
 
     public String toString(){
         //  Returns a string representation of the the program state
@@ -41,8 +50,13 @@ public class ProgramState{
         result = result + "    -------------------------------------\n        Symbol Table: " + this.symbolTable.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        File Table: " + this.fileTable.toString() + "\n    -------------------------------------\n\n";
         result = result + "    -------------------------------------\n        Heap: " + this.heap.toString() + "\n    -------------------------------------\n\n";
-        result = result + "    -------------------------------------\n        Output: " + this.output.toString() + "\n    -------------------------------------\n\n\n\n";
+        result = result + "    -------------------------------------\n        Output: " + this.output.toString() + "\n    -------------------------------------\n\n";
+        result = result + "    -------------------------------------\n        SemTable: " + this.semaphoreTable.toString() + "\n    -------------------------------------\n\n\n\n";
         return result;
+    }
+
+    public int getLocation() {
+        return location++;
     }
 
     public int getId() {
@@ -108,6 +122,14 @@ public class ProgramState{
     public ADTHeapInterface<Integer, ValueInterface> getHeap() {
         //  Returns the heap
         return heap;
+    }
+
+    public ADTDictionary<Integer, Pair<Integer, List<Integer>>> getSemaphoreTable() {
+        return semaphoreTable;
+    }
+
+    public void setSemaphoreTable(ADTDictionary<Integer, Pair<Integer, List<Integer>>> semaphoreTable) {
+        this.semaphoreTable = semaphoreTable;
     }
 
     public ProgramState oneStep() throws MyException {

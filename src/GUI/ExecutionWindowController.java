@@ -22,13 +22,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import Model.DesignPattern.MyObserver;
+import javafx.util.Pair;
 
 import java.io.BufferedReader;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -64,6 +62,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     private ADTDictionary<StringValue, BufferedReader> fileTable;
     private ADTStack<StatementInterface> executionStack;
     private ADTHeap<Integer, ValueInterface> heap;
+    ADTDictionary<Integer, Pair<Integer, List<Integer>>> semTable;
     public ProgramState programState;
     private Repository repository;
     private Controller controller;
@@ -78,7 +77,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
     public void setProgram(StatementInterface program) {
         //  Sets the program that will be executed
         this.program = program;
-        programState = new ProgramState(executionStack, symbolTable, program, output, fileTable, heap);
+        programState = new ProgramState(executionStack, symbolTable, program, output, fileTable, heap, semTable);
         controller.register(this);
         controller.addProgram(programState);
         ExeStackGUI.getItems().add(program.toString());
@@ -92,6 +91,7 @@ public class ExecutionWindowController implements Initializable, MyObserver {
         symbolTable = new ADTDictionary <String, ValueInterface>();         //  Dictionary containing the symbol table
         fileTable = new ADTDictionary<StringValue, BufferedReader>();   //  Dictionary containing files names and buffered readers
         executionStack = new ADTStack<StatementInterface>();                        //  Stack containing all the statements that have to be executed
+        semTable = new ADTDictionary<Integer, Pair<Integer, List<Integer>>>();
         heap = new ADTHeap<Integer, ValueInterface>();
         repository = new Repository("logFileGUI.txt");
         controller = new Controller(repository);

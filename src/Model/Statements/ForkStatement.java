@@ -46,7 +46,7 @@ public class ForkStatement implements StatementInterface{
         ADTDicionaryInterface<String, ValueInterface> symbolTable = new ADTDictionary<>();
         symbolTable.setContent(state.getSymbolTable().deepCopy());
 
-        ProgramState childProgramState = new ProgramState(executionStack, symbolTable, statement,state.getOutput(), state.getFileTable(), state.getHeap());
+        ProgramState childProgramState = new ProgramState(executionStack, symbolTable, statement,state.getOutput(), state.getFileTable(), state.getHeap(), state.getSemaphoreTable());
         state.setId(childProgramState.getId() + 1);
         return childProgramState;
     }
